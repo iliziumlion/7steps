@@ -1,0 +1,57 @@
+.title-block
+	position: relative
+
+	&__bg
+
+		img
+			width: 100%
+			display: block
+
+	&__title
+		position: absolute * 0 0
+		padding: 0 0 80px
+
+		.wrapper
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+		&-text
+
+			h1
+				font-size: 90px
+				font-weight: 300
+
+		&-btns
+			display: flex
+
+			a
+
+				&:not(:last-child)
+					margin-right: 14px
+
+@media (max-width: 1200px) and (min-width: 660px)
+	.title-block
+
+		&__title
+			padding: 0 0 30px
+
+			&-text
+
+				h1
+					font-size: 60px
+
+@media (max-width: 660px)
+	.title-block
+
+		&__bg
+			display: none
+
+		&__title
+			position: static
+			padding: 10px 0 20px
+
+			&-text
+
+				h1
+					font-size: 20px

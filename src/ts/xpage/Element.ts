@@ -272,6 +272,32 @@ export default class Element {
 		return this.els[index]
 	}
 
+	/** Метод получениея или установки высоты элементов
+	* @param height || empty 
+	* @return height: number || Element */
+	public height(height?: number): Element
+	public height(height?: string): Element
+	public height(height?: any): any{
+		if (!height)
+			return parseInt(getComputedStyle(this.els[0]).height)
+
+		App.each(this.els, (el: HTMLElement) => {
+			if (isNaN(height))
+				el.style.height = height
+			else
+				el.style.height = height + "px"
+		})
+
+		return this
+	}
+
+	/** Map
+	* @param callback: Function
+	* @return any[] */
+	public map(callback: any): any[]{
+		return this.els.map(callback)
+	}
+
 
 	/** Метод в разработке */
 	public prev(selector?: string): Element{

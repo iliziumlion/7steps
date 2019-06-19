@@ -183,15 +183,17 @@ li
 .soc
 	display: flex
 	flex-wrap: wrap
-	margin-bottom: -10px
 
 	&__link
 		display: flex
 		align-items: center
 		justify-content: center
+		background: #61686F
+		size: 42px
+		border-radius: 50%
 
 		&:not(:last-child)
-			margin-right: 25px
+			margin-right: 17px
 
 .swiper-list
 	overflow: hidden
@@ -203,3 +205,22 @@ li
 	display: inline-block
 	font-size: 14px
 	padding: 10px 18px 8px
+
+.default-btn
+	padding: 14px 25px 16px
+
+.default-btn, .more-btn, .arrow-btn
+	display: inline-block
+	border: none
+	border-radius: 5px
+	color: #fff var(--main-color)
+	transition: background-color .3s ease
+
+	&:hover, &:focus
+		background-color: lighten(#CC2128, .1)
+
+.arrow-btn
+	size: 49px
+	background-image: url("../img/ico-right-arrow-white.svg")
+	background-position: center
+	background-repeat: no-repeat

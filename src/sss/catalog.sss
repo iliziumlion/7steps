@@ -1,0 +1,110 @@
+.catalog-list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -20px -20px
+
+	&__item
+		display: flex
+		flex-direction: column
+		width: calc((100% - 20px * 4) / 4)
+		margin: 0 0 20px 20px
+
+.cat-item
+	border: 1px solid var(--border-color)
+	border-radius: 5px
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	background: #fff
+	position: relative
+
+	&__sale
+		position: absolute 57px * * -1px
+		color: #000 var(--thrid-color)
+		padding: 9px 15px
+		font-weight: bold
+		font-size: 13px
+
+	&__labels
+		margin: -1px -1px 0
+		flex: none
+
+	&__img
+		height: 200px
+		text-align: center
+		margin: 26px 0 0
+		flex: none
+
+		img
+			max-height: 100%
+
+	&__desc
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+		padding: 10px 33px 25px
+
+	&__title
+		letter-spacing: .02em
+		font-weight: 500
+		font-size: 19px
+		line-height: calc(24 / 19)
+		margin: 0 0 10px
+
+	&__volume
+		color: rgba(57, 57, 57, 0.5)
+		font-size: 14px
+		margin: 0 0 20px
+
+.cat-buy
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__price 
+		padding-right: 20px
+
+		&-curprice
+			font-size: 22px
+			font-weight: 500
+
+			&:first-child:last-child
+				color: #393939
+
+			&:first-child:not(:last-child)
+				color: #fff var(--second-color)
+				padding: 7px 14px 8px
+
+		&-lastprice
+			font-size: 18px
+			margin: 15px 0 0
+			color: #A3A0A0
+
+	&__btn
+		flex: none
+
+.cat-labels
+	display: flex
+
+	&__label
+		width: 50%
+		text-align: center
+		padding: 8px 10px
+		display: flex
+		align-items: center
+		justify-content: center
+
+		&:first-child
+			border-radius: 5px 0 0
+
+		&:last-child:not(:first-child)
+			border-radius: 0 5px 0 0
+
+		&--red
+			color: #fff var(--main-color)
+			font-weight: bold
+			font-size: 13px
+
+		&--yelow
+			color: #000 var(--thrid-color)
+			font-size: 10px

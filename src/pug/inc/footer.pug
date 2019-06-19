@@ -29,3 +29,18 @@ footer.footer
 								li
 									a.f-submenu__link(href="#")=item
 			.footer__links
+				.footer__links-subscribe
+					.subscribe-form
+						.subscribe-form__title Узнай первым о наших акциях
+						form(action="#")
+							input.subscribe-form__input(type="email" placeholder="Ваш e-mail")
+							input.default-btn(type="submit" value="Подписаться")
+				.footer__links-bot
+					.f-soc
+						.f-soc__title Мы в соцсетях
+						.soc
+							each item in ["vk", "inst", "ok"]
+								a.soc__link(href="#")
+									img(src="img/ico-"+item+".svg")
+					a.dev(href="#" target="_blank")
+						img(src="img/developer.svg")

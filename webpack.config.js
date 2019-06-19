@@ -8,7 +8,6 @@ module.exports = (env, argv) => {
 		entry: {
 			base: "./src/js/common.js",
 			common: "./src/ts/common.ts",
-			"main-page": "./src/ts/main-page.ts",
 		},
 		output: {
 			path: path.resolve(__dirname, "./docs/"),
@@ -80,7 +79,7 @@ module.exports = (env, argv) => {
 		                chunks: 'all',
 		            },
 		            lol: {
-		                test: /(jquery.fancybox.js|jquery.fancybox.css|stringAnimate.js)/,
+		                test: /(jquery.fancybox.js|jquery.fancybox.css)/,
 		                name: 'js/vendors',
 		                enforce: true,
 		                chunks: 'all'

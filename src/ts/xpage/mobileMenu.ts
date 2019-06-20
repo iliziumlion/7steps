@@ -1,6 +1,6 @@
-import EventListener from "./EventListener"
 import App from "./core"
 import Element from "./Element"
+import EventListener from "./EventListener"
 
 interface mobileMenuSettings {
 	burger: string,

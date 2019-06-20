@@ -7,7 +7,7 @@ interface EventOtions{
 	passive?: boolean
 }
 
-class EventListener extends Element{
+export default class EventListener extends Element{
 
 	/** 
 	* Метод для подписки на событие
@@ -43,5 +43,3 @@ class EventListener extends Element{
 		return this
 	}
 }
-
-export default EventListener

@@ -7,9 +7,12 @@
 @import "_header.sss"
 @import "main-slider.sss"
 @import "main-catalog.sss"
-
+@import "main-catalog-slider.sss"
+@import "main-banners.sss"
+@import "main-news.sss"
 
 @import "catalog.sss"
+@import "news.sss"
 
 @import "_footer.sss"
 
@@ -21,6 +24,20 @@
 
 	span
 		display: inline-block
+
+	&--decor
+
+		span
+			padding: 2px 45px
+			position: relative
+			z-index: 1
+			background: #FAFAFA
+
+		&:before
+			content: ""
+			size: 100% 1px
+			background: #DADDDF
+			position: absolute calc(50% - 1px) * * 0
 
 .price
 	white-space: nowrap

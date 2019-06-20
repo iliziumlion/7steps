@@ -1,4 +1,6 @@
 import "./main-slider"
+import "./main-banners"
+import "./catalog-slider"
 
 import {domReady, App, Element} from "./xpage/index"
 

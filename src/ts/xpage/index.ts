@@ -1,13 +1,5 @@
-import App from "./core"
-import Element from "./Element"
-import EventListener from "./EventListener"
-import MobileMenu from "./mobileMenu"
-import domReady from "./ready"
-
-export {
-	App,
-	Element,
-	EventListener, 
-	// MobileMenu, 
-	domReady
-}
+export {default as App} from "./core"
+export {default as Element} from "./Element"
+export {default as EventListener} from "./EventListener"
+// export {default as MobileMenu} from "./mobileMenu"
+export {default as domReady} from "./ready"

@@ -20,19 +20,9 @@ input, a, button, textarea, select
 	color: #adb4c6
 	opacity: 1
 
-.slick-arrow
-	border: none
-	background: none
-	padding: 0
-	text-indent: -9999px
-	overflow: hidden
-
 .swiper-button-disabled
 	opacity: .5
 	pointer-events: none
-
-.slick-slide
-	height: auto !important
 
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select, input[type="submit"], button
 	-webkit-appearance: none
@@ -56,25 +46,6 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea, select
 	border-radius: 0
 
-// #{$all-text-inputs}
-
-// 	&:not(.form-control):not(.comment-form__text)
-	
-// 		&::-webkit-input-placeholder
-// 			color: #fff
-// 			opacity: 1
-
-// 		&:-moz-placeholder
-// 			color: #fff
-// 			opacity: 1
-
-// 		&::-moz-placeholder
-// 			color: #fff
-// 			opacity: 1
-
-// 		&:-ms-input-placeholder
-// 			color: #fff
-// 			opacity: 1
 
 *, *:after, *:before
 	box-sizing: border-box
@@ -95,7 +66,7 @@ body
 	font-family: var(--default-font)
 	font-weight: 400
 	font-size: 14px
-	background: #fff
+	background: #FAFAFA
 	color: #000
 	position: relative
 	left: 0
@@ -123,6 +94,22 @@ select
 
 #content
 	flex: 1 1 auto
+
+.swiper-button
+
+	&-prev, &-next
+		position: static
+		border: 1px solid #DADDDF
+		border-radius: 5px
+		size: 49px
+		background: url("../img/ico-slider-arrow.svg") center no-repeat, var(--main-color)
+		transition: background-color .3s ease
+
+		&:hover, &:focus
+			background-color: lighten(#CC2128, .1)
+
+	&-prev
+		transform: rotateY(180deg)
 
 .inner-content
 	flex: 1 1 auto
@@ -207,7 +194,7 @@ li
 	padding: 10px 18px 8px
 
 .default-btn
-	padding: 14px 25px 16px
+	padding: 15px 25px
 
 .default-btn, .more-btn, .arrow-btn
 	display: inline-block
@@ -218,6 +205,16 @@ li
 
 	&:hover, &:focus
 		background-color: lighten(#CC2128, .1)
+
+.more-btn
+	padding: 15px 50px 15px 25px
+	position: relative
+
+	&:after
+		content: ""
+		position: absolute calc(50% - 7px) 25px * *
+		background: url("../img/ico-update.svg") center no-repeat
+		size: 14px
 
 .arrow-btn
 	size: 49px

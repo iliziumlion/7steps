@@ -1,0 +1,52 @@
+.news-list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -21px -21px
+
+	&__item
+		width: calc((100% - 21px * 3) / 3)
+		margin: 0 0 21px 21px
+
+.news-item
+	position: relative
+	color: #fff
+
+	&__img
+
+		img
+			display: block
+			width: 100%
+			border-radius: 5px
+
+	&__date
+		color: #fff var(--main-color)
+		padding: 15px 25px
+		font-size: 14px
+		border-radius: 5px
+		position: absolute 35px * * 35px
+
+	&__desc
+		position: absolute 0
+		background: url("../img/news-desc-shadow.png") left bottom no-repeat
+		background-size: 100% auto
+		padding: 20px 35px 42px
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+
+		&-title
+			color: inherit
+			font-weight: 500
+			font-size: 22px
+			letter-spacing: .02em
+			line-height: calc(28 / 22)
+			max-width: 230px
+			margin-right: 20px
+
+		&-btn
+			flex: none
+
+		&-cont
+			display: flex
+			align-items: center
+			justify-content: space-between

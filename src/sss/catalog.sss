@@ -17,6 +17,7 @@
 	flex-direction: column
 	background: #fff
 	position: relative
+	padding: 33px 0 0
 
 	&__sale
 		position: absolute 57px * * -1px
@@ -26,8 +27,9 @@
 		font-size: 13px
 
 	&__labels
-		margin: -1px -1px 0
+		// margin: -1px -1px 0
 		flex: none
+		position: absolute -1px -1px * -1px
 
 	&__img
 		height: 200px
@@ -108,3 +110,25 @@
 		&--yelow
 			color: #000 var(--thrid-color)
 			font-size: 10px
+
+.cat2-list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -22px -20px
+
+	&__item
+		width: calc((100% - 20px * 3) / 3)
+		margin: 0 0 22px 20px
+		display: flex
+		flex-direction: column
+
+.cat2
+	display: flex
+
+	&__filter
+		width: 302px
+		margin-right: 20px
+		flex: none
+
+	&__list
+		width: calc(100% - 222px)

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог - плитка
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Фрукты и овощи
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Каталог
+									span.bread-crumbs__this Фрукты и овощи
+				.inner-content__content
+					.cat2__cont
+						.wrapper
+							.cat2
+								.cat2__filter
+									aside.filter
+										form(action="#")
+											.filter
+												each type in ["Фрукты", "Овощи", "Грибы", "Ягоды", ]
+													.filter__item
+														.filter__item-title=type
+														.filter__item-content
+															ul.filter-list
+																each item in ["Цитрусовые", "Персики, нектарины", "Яблоки, айва", "Экзотические фрукты", "Виноград", "Хурма, гранат", "Груши", "Бананы", "Абрикос, слива, алыча", ]
+																	li
+																		a.filter-list__link(href="#")=item
+												.filter__item
+													.filter__item-title Цена
+													.filter__item-content
+														.price-filter
+												.filter__item
+													.filter__item-title Бренд
+													.filter__item-content
+														.search-filter
+												.filter__btn
+													input.default-btn(type="submit" value="Очистить все фильтры")
+								.cat2__list
+									.cat2__list-sort
+									.cat2-list
+										- for (let j = 0; j < 3; j++)
+											each item, i in ['Вода мин. лечебно-столовая "Сарыагаш" газ.', 'Нектар  с мяк. "Сто Рецептов" тыквенный', 'Квас "Никола Традиционный" фильт. паст. ж/б ', ]
+												.cat2-list__item
+													.cat-item
+														if (j != 1)
+															.cat-item__labels
+																.cat-labels
+																	.cat-labels__label.cat-labels__label--red Акция 10.06 / 10.07
+																	if ( i == 1)
+																		.cat-labels__label.cat-labels__label--yelow Не во всех магазинах
+														if (j != 1)
+															if (i == 1)
+																.cat-item__sale Супер цена
+															else
+																.cat-item__sale 25%
+														a.cat-item__img(href="#")
+															img(src="img/photos/mc-img-"+i+".jpg")
+														.cat-item__desc
+															a.cat-item__title(href="#")=item
+															.cat-item__volume 300 мл
+															.cat-item__buy
+																.cat-buy
+																	.cat-buy__price
+																		.cat-buy__price-curprice
+																			.price 22.
+																				span 99 
+																				i.rub ₽
+																		if (j != 1)
+																			.cat-buy__price-lastprice
+																				.price 22.
+																					span 99 
+																					i.rub ₽
+																	.cat-buy__btn
+																		a.arrow-btn(href="#")
+										.main-catalog__list-more
+											a.more-btn(href="#") Показать ещё
+		include inc/footer.pug
+		include inc/scripts.pug

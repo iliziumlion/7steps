@@ -1,57 +1,32 @@
 .title-block
-	position: relative
-
-	&__bg
-
-		img
-			width: 100%
-			display: block
+	letter-spacing: 0.02em
 
 	&__title
-		position: absolute * 0 0
-		padding: 0 0 80px
+		margin-bottom: 9px
 
-		.wrapper
-			display: flex
-			align-items: center
-			justify-content: space-between
+		h1
+			font-weight: bold
+			color: #393939
+			font-size: 24px
 
-		&-text
+.bread-crumbs
 
-			h1
-				font-size: 90px
-				font-weight: 300
+	&__link
+		color: #B0B7BB
 
-		&-btns
-			display: flex
+		&:first-child
 
-			a
+			&:before
+				background: url("../img/ico-home.svg") no-repeat
+				size: 11px
+				content: ""
+				display: inline-block
+				margin-right: 15px
 
-				&:not(:last-child)
-					margin-right: 14px
+		&:after
+			content: "-"
+			display: inline-block
+			margin: 0 5px
 
-@media (max-width: 1200px) and (min-width: 660px)
-	.title-block
-
-		&__title
-			padding: 0 0 30px
-
-			&-text
-
-				h1
-					font-size: 60px
-
-@media (max-width: 660px)
-	.title-block
-
-		&__bg
-			display: none
-
-		&__title
-			position: static
-			padding: 10px 0 20px
-
-			&-text
-
-				h1
-					font-size: 20px
+	&__this
+		color: var(--main-color)

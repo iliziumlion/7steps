@@ -5,7 +5,7 @@ html(lang="ru")
 		title Каталог
 		include inc/head.pug
 		include inc/css.pug
-	body.main.loading
+	body.inner.loading
 		include inc/header.pug 
 		main#content
 			.inner-content
@@ -13,7 +13,7 @@ html(lang="ru")
 					.wrapper
 						.title-block
 							.title-block__title
-								h1
+								h1 Каталог
 							.title-block__crumbs
 								.bread-crumbs
 									a.bread-crumbs__link(href="#") Главная
@@ -22,5 +22,15 @@ html(lang="ru")
 					.catalog__cont
 						.wrapper
 							.catalog
+								.cat-list
+									each item, i in ["Фрукты и овощи", "Мясо, птица, колбаса", "Молоко, сыр, яйцо", "Замороженная продукция", "Кондитерские изделия", "Функциональное питание", "Чай, кофе, какао", "Алкогольные напитки", "Безалкогольные напитки", "Хлеб и хлебобулочные изделия", "Бакалея", "Готовые блюда", "Рыба и морепродукты", "Красота и здоровье", "Бытовая химия", "Бытовая техника и электроника", ]
+										.cat-list__item
+											.catalog-item
+												a.catalog-item__img(href="#")
+													img(src="img/photos/catalog-img-"+i+".jpg", alt=item)
+												.catalog-item__title
+													.catalog-item__title-btn
+														a.arrow-btn(href="#")
+													a.catalog-item__title-text(href="#")=item
 		include inc/footer.pug
 		include inc/scripts.pug

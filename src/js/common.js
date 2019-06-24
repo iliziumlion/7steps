@@ -1,4 +1,5 @@
 import $ from "jquery"
+import "./filter.js"
 
 window.$ = $;
 window.jQuery = $;

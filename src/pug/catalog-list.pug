@@ -2,7 +2,7 @@
 html(lang="ru")
 	head
 		meta(charset="utf-8")
-		title Каталог - плитка
+		title Каталог - список
 		include inc/head.pug
 		include inc/css.pug
 	body.inner.loading
@@ -45,21 +45,15 @@ html(lang="ru")
 													option 12
 											.sort__view
 												.view
-													a.view-plates.active(href="#")
-													a.view-list(href="#")
+													a.view-plates(href="#")
+													a.view-list.active(href="#")
 											.sort__filter
 												.filter-btn
-									.cat2-list
-										- for (let j = 0; j < 3; j++)
+									.cat2-list.cat2-list--list
+										- for (let j = 0; j < 2; j++)
 											each item, i in ['Вода мин. лечебно-столовая "Сарыагаш" газ.', 'Нектар  с мяк. "Сто Рецептов" тыквенный', 'Квас "Никола Традиционный" фильт. паст. ж/б ', ]
 												.cat2-list__item
-													.cat-item
-														if (j != 1)
-															.cat-item__labels
-																.cat-labels
-																	.cat-labels__label.cat-labels__label--red Акция 10.06 / 10.07
-																	if ( i == 1)
-																		.cat-labels__label.cat-labels__label--yelow Не во всех магазинах
+													.cat-list-item
 														if (j != 1)
 															if (i == 1)
 																.cat-item__sale Супер цена
@@ -68,6 +62,11 @@ html(lang="ru")
 														a.cat-item__img(href="#")
 															img(src="img/photos/mc-img-"+i+".jpg")
 														.cat-item__desc
+															.cat-item__desc-labels
+																.cat-labels
+																	.cat-labels__label.cat-labels__label--red Акция 10.06 / 10.07
+																	if ( i == 1)
+																		.cat-labels__label.cat-labels__label--yelow Не во всех магазинах
 															a.cat-item__title(href="#")=item
 															.cat-item__volume 300 мл
 															.cat-item__buy

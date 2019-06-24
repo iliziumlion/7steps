@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8"/>
-    <title>Каталог - плитка</title>
+    <title>Каталог - список</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
@@ -293,23 +293,23 @@
                         </select>
                       </div>
                       <div class="sort__view">
-                        <div class="view"><a class="view-plates active" href="#"></a><a class="view-list" href="#"></a></div>
+                        <div class="view"><a class="view-plates" href="#"></a><a class="view-list active" href="#"></a></div>
                       </div>
                       <div class="sort__filter">
                         <div class="filter-btn"></div>
                       </div>
                     </div>
                   </div>
-                  <div class="cat2-list">
+                  <div class="cat2-list cat2-list--list">
                     <div class="cat2-list__item">
-                      <div class="cat-item">
-                        <div class="cat-item__labels">
-                          <div class="cat-labels">
-                            <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
-                          </div>
-                        </div>
+                      <div class="cat-list-item">
                         <div class="cat-item__sale">25%</div><a class="cat-item__img" href="#"><img src="img/photos/mc-img-0.jpg"/></a>
-                        <div class="cat-item__desc"><a class="cat-item__title" href="#">Вода мин. лечебно-столовая &quot;Сарыагаш&quot; газ.</a>
+                        <div class="cat-item__desc">
+                          <div class="cat-item__desc-labels">
+                            <div class="cat-labels">
+                              <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
+                            </div>
+                          </div><a class="cat-item__title" href="#">Вода мин. лечебно-столовая &quot;Сарыагаш&quot; газ.</a>
                           <div class="cat-item__volume">300 мл</div>
                           <div class="cat-item__buy">
                             <div class="cat-buy">
@@ -328,15 +328,15 @@
                       </div>
                     </div>
                     <div class="cat2-list__item">
-                      <div class="cat-item">
-                        <div class="cat-item__labels">
-                          <div class="cat-labels">
-                            <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
-                            <div class="cat-labels__label cat-labels__label--yelow">Не во всех магазинах</div>
-                          </div>
-                        </div>
+                      <div class="cat-list-item">
                         <div class="cat-item__sale">Супер цена</div><a class="cat-item__img" href="#"><img src="img/photos/mc-img-1.jpg"/></a>
-                        <div class="cat-item__desc"><a class="cat-item__title" href="#">Нектар  с мяк. &quot;Сто Рецептов&quot; тыквенный</a>
+                        <div class="cat-item__desc">
+                          <div class="cat-item__desc-labels">
+                            <div class="cat-labels">
+                              <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
+                              <div class="cat-labels__label cat-labels__label--yelow">Не во всех магазинах</div>
+                            </div>
+                          </div><a class="cat-item__title" href="#">Нектар  с мяк. &quot;Сто Рецептов&quot; тыквенный</a>
                           <div class="cat-item__volume">300 мл</div>
                           <div class="cat-item__buy">
                             <div class="cat-buy">
@@ -355,14 +355,14 @@
                       </div>
                     </div>
                     <div class="cat2-list__item">
-                      <div class="cat-item">
-                        <div class="cat-item__labels">
-                          <div class="cat-labels">
-                            <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
-                          </div>
-                        </div>
+                      <div class="cat-list-item">
                         <div class="cat-item__sale">25%</div><a class="cat-item__img" href="#"><img src="img/photos/mc-img-2.jpg"/></a>
-                        <div class="cat-item__desc"><a class="cat-item__title" href="#">Квас &quot;Никола Традиционный&quot; фильт. паст. ж/б </a>
+                        <div class="cat-item__desc">
+                          <div class="cat-item__desc-labels">
+                            <div class="cat-labels">
+                              <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
+                            </div>
+                          </div><a class="cat-item__title" href="#">Квас &quot;Никола Традиционный&quot; фильт. паст. ж/б </a>
                           <div class="cat-item__volume">300 мл</div>
                           <div class="cat-item__buy">
                             <div class="cat-buy">
@@ -381,8 +381,13 @@
                       </div>
                     </div>
                     <div class="cat2-list__item">
-                      <div class="cat-item"><a class="cat-item__img" href="#"><img src="img/photos/mc-img-0.jpg"/></a>
-                        <div class="cat-item__desc"><a class="cat-item__title" href="#">Вода мин. лечебно-столовая &quot;Сарыагаш&quot; газ.</a>
+                      <div class="cat-list-item"><a class="cat-item__img" href="#"><img src="img/photos/mc-img-0.jpg"/></a>
+                        <div class="cat-item__desc">
+                          <div class="cat-item__desc-labels">
+                            <div class="cat-labels">
+                              <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
+                            </div>
+                          </div><a class="cat-item__title" href="#">Вода мин. лечебно-столовая &quot;Сарыагаш&quot; газ.</a>
                           <div class="cat-item__volume">300 мл</div>
                           <div class="cat-item__buy">
                             <div class="cat-buy">
@@ -398,8 +403,14 @@
                       </div>
                     </div>
                     <div class="cat2-list__item">
-                      <div class="cat-item"><a class="cat-item__img" href="#"><img src="img/photos/mc-img-1.jpg"/></a>
-                        <div class="cat-item__desc"><a class="cat-item__title" href="#">Нектар  с мяк. &quot;Сто Рецептов&quot; тыквенный</a>
+                      <div class="cat-list-item"><a class="cat-item__img" href="#"><img src="img/photos/mc-img-1.jpg"/></a>
+                        <div class="cat-item__desc">
+                          <div class="cat-item__desc-labels">
+                            <div class="cat-labels">
+                              <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
+                              <div class="cat-labels__label cat-labels__label--yelow">Не во всех магазинах</div>
+                            </div>
+                          </div><a class="cat-item__title" href="#">Нектар  с мяк. &quot;Сто Рецептов&quot; тыквенный</a>
                           <div class="cat-item__volume">300 мл</div>
                           <div class="cat-item__buy">
                             <div class="cat-buy">
@@ -415,92 +426,18 @@
                       </div>
                     </div>
                     <div class="cat2-list__item">
-                      <div class="cat-item"><a class="cat-item__img" href="#"><img src="img/photos/mc-img-2.jpg"/></a>
-                        <div class="cat-item__desc"><a class="cat-item__title" href="#">Квас &quot;Никола Традиционный&quot; фильт. паст. ж/б </a>
-                          <div class="cat-item__volume">300 мл</div>
-                          <div class="cat-item__buy">
-                            <div class="cat-buy">
-                              <div class="cat-buy__price">
-                                <div class="cat-buy__price-curprice">
-                                  <div class="price">22.<span>99 </span><i class="rub">₽</i></div>
-                                </div>
-                              </div>
-                              <div class="cat-buy__btn"><a class="arrow-btn" href="#"></a></div>
+                      <div class="cat-list-item"><a class="cat-item__img" href="#"><img src="img/photos/mc-img-2.jpg"/></a>
+                        <div class="cat-item__desc">
+                          <div class="cat-item__desc-labels">
+                            <div class="cat-labels">
+                              <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cat2-list__item">
-                      <div class="cat-item">
-                        <div class="cat-item__labels">
-                          <div class="cat-labels">
-                            <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
-                          </div>
-                        </div>
-                        <div class="cat-item__sale">25%</div><a class="cat-item__img" href="#"><img src="img/photos/mc-img-0.jpg"/></a>
-                        <div class="cat-item__desc"><a class="cat-item__title" href="#">Вода мин. лечебно-столовая &quot;Сарыагаш&quot; газ.</a>
+                          </div><a class="cat-item__title" href="#">Квас &quot;Никола Традиционный&quot; фильт. паст. ж/б </a>
                           <div class="cat-item__volume">300 мл</div>
                           <div class="cat-item__buy">
                             <div class="cat-buy">
                               <div class="cat-buy__price">
                                 <div class="cat-buy__price-curprice">
-                                  <div class="price">22.<span>99 </span><i class="rub">₽</i></div>
-                                </div>
-                                <div class="cat-buy__price-lastprice">
-                                  <div class="price">22.<span>99 </span><i class="rub">₽</i></div>
-                                </div>
-                              </div>
-                              <div class="cat-buy__btn"><a class="arrow-btn" href="#"></a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cat2-list__item">
-                      <div class="cat-item">
-                        <div class="cat-item__labels">
-                          <div class="cat-labels">
-                            <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
-                            <div class="cat-labels__label cat-labels__label--yelow">Не во всех магазинах</div>
-                          </div>
-                        </div>
-                        <div class="cat-item__sale">Супер цена</div><a class="cat-item__img" href="#"><img src="img/photos/mc-img-1.jpg"/></a>
-                        <div class="cat-item__desc"><a class="cat-item__title" href="#">Нектар  с мяк. &quot;Сто Рецептов&quot; тыквенный</a>
-                          <div class="cat-item__volume">300 мл</div>
-                          <div class="cat-item__buy">
-                            <div class="cat-buy">
-                              <div class="cat-buy__price">
-                                <div class="cat-buy__price-curprice">
-                                  <div class="price">22.<span>99 </span><i class="rub">₽</i></div>
-                                </div>
-                                <div class="cat-buy__price-lastprice">
-                                  <div class="price">22.<span>99 </span><i class="rub">₽</i></div>
-                                </div>
-                              </div>
-                              <div class="cat-buy__btn"><a class="arrow-btn" href="#"></a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cat2-list__item">
-                      <div class="cat-item">
-                        <div class="cat-item__labels">
-                          <div class="cat-labels">
-                            <div class="cat-labels__label cat-labels__label--red">Акция 10.06 / 10.07</div>
-                          </div>
-                        </div>
-                        <div class="cat-item__sale">25%</div><a class="cat-item__img" href="#"><img src="img/photos/mc-img-2.jpg"/></a>
-                        <div class="cat-item__desc"><a class="cat-item__title" href="#">Квас &quot;Никола Традиционный&quot; фильт. паст. ж/б </a>
-                          <div class="cat-item__volume">300 мл</div>
-                          <div class="cat-item__buy">
-                            <div class="cat-buy">
-                              <div class="cat-buy__price">
-                                <div class="cat-buy__price-curprice">
-                                  <div class="price">22.<span>99 </span><i class="rub">₽</i></div>
-                                </div>
-                                <div class="cat-buy__price-lastprice">
                                   <div class="price">22.<span>99 </span><i class="rub">₽</i></div>
                                 </div>
                               </div>

@@ -166,6 +166,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filter.js */ "./src/js/filter.js");
+
 
 window.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
 window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
@@ -185,6 +187,84 @@ document.addEventListener("DOMContentLoaded", function () {
     transitionEffect: "slide"
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/filter.js":
+/*!**************************!*\
+  !*** ./src/js/filter.js ***!
+  \**************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery_ui_ui_widgets_slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery-ui/ui/widgets/slider.js */ "./node_modules/jquery-ui/ui/widgets/slider.js");
+/* harmony import */ var jquery_ui_ui_widgets_slider_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery_ui_ui_widgets_slider_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  /** Свернуть развернуть фильтр */
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").on("click", ".filter__item-title", function () {
+    var $this = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this),
+        $list = $this.next(".filter__item-content");
+
+    if ($this.hasClass("js__opened")) {
+      $this.removeClass("js__opened");
+      $list.slideUp(300);
+    } else {
+      // $(".filter__item-title.js__opened").removeClass("js__opened")
+      // .next(".filter__item-content").slideUp(300)
+      $this.addClass("js__opened");
+      $list.slideDown(300);
+    }
+  });
+  /** ul-slider Для цены в фильтре*/
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".price-filter").length) {// require("")
+  }
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".price-filter").each(function () {
+    var $this = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this),
+        min = +$this.find(".price-min").val() || 0,
+        max = +$this.find(".price-max").val() || 0,
+        step = +$this.find(".price-step").val() || 0,
+        curMin = +$this.find(".price-min-cur").val() || min,
+        curMax = +$this.find(".price-max-cur").val() || max,
+        $maxInput = $this.find(".price-min-cur"),
+        $minInput = $this.find(".price-min-cur");
+    $this.find(".price-filter__slider").slider({
+      animate: "normal",
+      min: min,
+      max: max,
+      values: [parseInt(curMin), parseInt(curMax)],
+      range: true,
+      step: step,
+      slide: function slide(e, ui) {
+        $maxInput.val(parseInt(ui.values[0]));
+        $minInput.val(parseInt(ui.values[1]));
+        setMinHandle($this.find(".price-filter__slider"), parseInt(ui.values[0]));
+        setMaxHandle($this.find(".price-filter__slider"), parseInt(ui.values[1]));
+      }
+    });
+    setMinHandle($this.find(".price-filter__slider"), parseInt(curMin));
+    setMaxHandle($this.find(".price-filter__slider"), parseInt(curMax));
+  });
+});
+
+var partNumber = function partNumber(number) {
+  return number.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+},
+    setMinHandle = function setMinHandle($uiSlider, count) {
+  console.log($uiSlider.find(".ui-slider-handle:nth-last-child(2)"));
+  $uiSlider.find(".ui-slider-handle:nth-last-child(2)").attr("data-count", partNumber(count));
+},
+    setMaxHandle = function setMaxHandle($uiSlider, count) {
+  console.log($uiSlider.find(".ui-slider-handle:nth-last-child(1)"));
+  $uiSlider.find(".ui-slider-handle:nth-last-child(1)").attr("data-count", partNumber(count));
+};
 
 /***/ })
 

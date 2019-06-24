@@ -1,0 +1,58 @@
+.sort
+	background: #fff
+	border: 1px solid var(--border-color)
+	border-radius: 5px
+	display: flex
+	align-items: center
+	padding: 24px 25px 25px
+	letter-spacing: .02em
+	font-size: 14px
+
+	&__select
+
+		&:first-child
+			margin-right: auto
+
+		&-select, &-label
+			display: inline-block
+			vertical-align: middle
+
+		&-select
+			color: var(--main-color)
+			border: none
+			padding: 0 20px 0 10px
+			background: url("../img/ico-select-arrow.svg") right center no-repeat
+
+			option
+				color: #000
+
+	&__filter
+		display: none
+
+	&__view
+		margin-left: 150px
+
+.view
+	display: flex
+
+	&-plates, &-list
+		size: 19px
+
+		&:not(:first-child)
+			margin-left: 25px
+
+	&-plates
+
+		&:not(.active)
+			background: url("../img/ico-plates.svg") no-repeat
+
+		&.active
+			background: url("../img/ico-plates-active.svg") no-repeat
+
+	&-list
+
+		&:not(.active)
+			background: url("../img/ico-list.svg") no-repeat
+
+		&.active
+			background: url("../img/ico-list-active.svg") no-repeat

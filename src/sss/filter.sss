@@ -1,4 +1,162 @@
+@import "jquery-ui/themes/base/slider.css"
+
 .filter
 	background: #fff
 	border: 1px solid var(--border-color)
 	border-radius: 5px
+
+	&__item
+
+		&:not(:last-of-type)
+			border-bottom: 1px solid var(--border-color)
+
+		&-title
+			cursor: pointer
+			position: relative
+			padding: 19px 50px 20px 30px
+			letter-spacing: .02em
+			font-size: 16px
+			font-weight: bold
+			line-height: calc(32 / 16)
+			user-select: none
+
+			&:after
+				content: ''
+				position: absolute calc(50% - 3px) 32px * *
+				border-right: 1px solid #000
+				border-bottom: 1px solid #000
+				size: 6px
+				transition: transform .3s ease
+
+			&:not(.js__opened)
+
+				&:after
+					transform: rotate(45deg)
+
+			&.js__opened
+
+				&:after
+					transform: rotate(-135deg)
+
+		&-content
+			padding: 0 30px 25px
+			display: none
+
+	&__btn
+		padding: 0 30px 32px
+		display: block
+
+.filter-list
+
+	li
+
+		&:not(:first-child)
+			margin: 15px 0 0
+
+.price-filter
+	padding: 6px 0 35px
+
+	&__inputs
+		display: none
+
+	&__slider
+		background: #E8EAEE
+		border-radius: 1px
+		height: 2px
+
+		.ui-slider
+
+			&-handle
+				size: 18px
+				background: #E8EAEE
+				margin: 0 0 0 -9px
+				top: calc(50% - 9px)
+				border: none
+				border-radius: 50%
+				cursor: pointer
+
+				&:after
+					border-radius: inherit
+					background: var(--main-color)
+					size: 8px
+					content: ""
+					position: absolute calc(50% - 4px) calc(50% - 4px) * *
+
+				&:before
+					position: absolute
+					font-size: 14px
+					top: calc(100% + 11px)
+					white-space: nowrap
+
+				&:nth-last-child(2)
+
+					&:before
+						left: 0
+						content: "от " attr(data-count) " ₽"
+
+				&:last-child
+
+					&:before
+						right: 0
+						content: "до " attr(data-count) " ₽"
+
+			&-range
+				background: var(--main-color)
+
+.search-filter
+
+	&__input
+		margin: 0 0 28px 
+
+	&__list
+
+		&-toggle
+			cursor: pointer
+			display: inline-block
+			margin: 30px 0 0
+			color: var(--main-color)
+			font-size: 14px
+			padding-right: 20px
+			position: relative
+			user-select: none
+
+			&:after
+				content: ""
+				position: absolute calc(50% - 5px) 2px * *
+				size: 6px
+				border-right: 1px solid currentColor
+				border-bottom: 1px solid currentColor
+				transform: rotate(45deg)
+
+.sf-input
+	position: relative
+
+	&__input
+		border: 1px solid var(--border-color)
+		background: #fff
+		border-radius: 5px !important
+		padding: 10px 70px 10px 20px
+		font-size: 14px
+		letter-spacing: .02em
+		size: 100% 50px
+
+	&__submit
+		border: none
+		border-radius: 0 5px 5px 0
+		position: absolute 0 0 0 *
+		size: 50px
+		background: url("../img/ico-search.svg") center no-repeat, var(--main-color)
+		transition: background .3s ease
+
+		&:hover, &:focus
+			background-color: lighten(#CC2128, .1)
+
+.search-list
+
+	&__item
+
+		&:not(:first-child)
+			margin: 17px 0 0
+
+		&:nth-child(n + 7)
+			display: none

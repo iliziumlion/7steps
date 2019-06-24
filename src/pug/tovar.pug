@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Карточка
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Огурцы длинноплодные
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Каталог
+									a.bread-crumbs__link(href="#") Фрукты и овощи
+									span.bread-crumbs__this Огурцы длинноплодные
+				.inner-content__content
+					.tovar__cont
+						.wrapper
+							.tovar
+								.tovar__slider
+									.tovar__slider-sale 25%
+									.tovar-sliders
+										.tovar-sliders__big
+											.tb-slider
+												.swiper-wrapper
+													- for (let i = 0; i < 10; i++)
+														.swiper-slide
+															a.tb-slider__slide.fancybox(data-fancybox="tovar-gallery" href="img/photos/tovar-big-img.jpg")
+																if (i == 0)
+																	img(src="img/photos/tovar-big-img.jpg")
+																else
+																	img.swiper-lazy(data-src="img/photos/tovar-big-img.jpg")
+																	.swiper-lazy-preloader
+										.tovar-sliders__small
+											.ts-slider
+												.ts-slider__arrows
+													.swiper-button-prev
+													.swiper-button-next
+												.ts-slider__list
+													.swiper-wrapper
+														- for (let i = 0; i < 10; i++)
+															.swiper-slide
+																figure.ts-slider__slide
+																	if (i == 0 || i == 1 || i == 2)
+																		img(src="img/photos/tovar-small-img.jpg")
+																	else
+																		img.swiper-lazy(data-src="img/photos/tovar-small-img.jpg")
+																		.swiper-lazy-preloader
+								.tovar__desc
+									.tovar-desc
+										.tovar-desc__title Огурцы длинноплодные
+										.tovar-desc__params
+											ul.tovar-params
+												li.tovar-params__item
+													span.tovar-params__item-title Вес
+													span.tovar-params__item-val 240 (гр.)
+												li.tovar-params__item
+													span.tovar-params__item-title Страна
+													span.tovar-params__item-val Россия
+										.tovar-desc__prices
+											.tovar-price
+												.tovar-price__cur
+													.price 22.
+														span 99
+														i.rub ₽
+												.tovar-price__last
+													.price 22.
+														span 00
+														i.rub ₽
+										.tovar-desc__btns
+											a.default-btn(href="#") Акция действует в магазинах
+											a.white-btn(href="#") Есть рецепт
+		include inc/footer.pug
+		include inc/scripts.pug

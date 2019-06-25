@@ -21,7 +21,7 @@ html(lang="ru")
 									a.bread-crumbs__link(href="#") Фрукты и овощи
 									span.bread-crumbs__this Огурцы длинноплодные
 				.inner-content__content
-					.tovar__cont
+					section.tovar__cont
 						.wrapper
 							.tovar
 								.tovar__slider
@@ -38,6 +38,7 @@ html(lang="ru")
 																else
 																	img.swiper-lazy(data-src="img/photos/tovar-big-img.jpg")
 																	.swiper-lazy-preloader
+										<!-- не выводить этот слайдер, если картинка одна -->
 										.tovar-sliders__small
 											.ts-slider
 												.ts-slider__arrows
@@ -68,14 +69,107 @@ html(lang="ru")
 											.tovar-price
 												.tovar-price__cur
 													.price 22.
-														span 99
+														span 99 
 														i.rub ₽
 												.tovar-price__last
 													.price 22.
-														span 00
+														span 00 
 														i.rub ₽
 										.tovar-desc__btns
 											a.default-btn(href="#") Акция действует в магазинах
 											a.white-btn(href="#") Есть рецепт
+					section.main-catalog-slider
+						.wrapper
+							.main-catalog-slider__title
+								.main-title
+									span Наши лучшие цены
+							.catalog-slider
+								.catalog-slider__nav
+									.swiper-button-prev
+									.swiper-button-next
+								.catalog-slider__list
+									.swiper-wrapper
+										each item, i in ['Вода мин. лечебно-столовая "Сарыагаш" газ.', 'Нектар  с мяк. "Сто Рецептов" тыквенный', 'Квас "Никола Традиционный" фильт. паст. ж/б ', 'Вода мин. лечебно-столовая "Сарыагаш" газ. ', ]
+											.swiper-slide
+												.cat-item
+													a.cat-item__img(href="#")
+														img.swiper-lazy(data-src="img/photos/mc-img-"+i+".jpg")
+														.swiper-lazy-preloader
+													.cat-item__desc
+														a.cat-item__title(href="#")=item
+														.cat-item__volume 300 мл
+														.cat-item__buy
+															.cat-buy
+																.cat-buy__price
+																	.cat-buy__price-curprice
+																		.price 22.
+																			span 99 
+																			i.rub ₽
+																.cat-buy__btn
+																	a.arrow-btn(href="#")
+					section.stock-map__cont
+						.wrapper
+							.stock-map
+								.stock-map__title Акция действует в магазинах
+								.stock-map__text Количество товаров ограничено, не является публичной офертой. 
+									br 
+									| Информацию об ассортименте и наличии товаров, участвующих в акции, уточняйте в магазине
+								.stock-map__map
+									.s-map
+										.s-map__points
+											ul.points-list
+												- for (let i = 0; i < 10; i++)
+													each point in [{address: "проспект Большевиков, 24", metro: "Ст. м. Улица Дыбенко"}, {address: "улица Васи Алексеева, 10", metro: "Ст. м. Кировский завод"}, {address: "Бухарестская улица, 31к1", metro: "Ст. м. Международная"}, {address: "Ленская улица, 18", metro: "Ст. м. Ладожская"}, ]
+														li.points-list__item
+															.points-list__address
+																.point-address
+																	address.point-address__address=point.address
+																	.point-address__metro=point.metro
+															time.points-list__time
+																span Пн. - вс.: 09:00 - 23:00
+										.s-map__map
+											img(src="img/photos/tovar-map.jpg")
+					section.main-catalog-slider
+						.wrapper
+							.main-catalog-slider__title
+								.main-title.main-title--decor
+									span Предложение недели
+							.catalog-slider
+								.catalog-slider__nav
+									.swiper-button-prev
+									.swiper-button-next
+								.catalog-slider__list
+									.swiper-wrapper
+										each item, i in ['Вода мин. лечебно-столовая "Сарыагаш" газ.', 'Нектар  с мяк. "Сто Рецептов" тыквенный', 'Квас "Никола Традиционный" фильт. паст. ж/б ', 'Вода мин. лечебно-столовая "Сарыагаш" газ. ', ]
+											.swiper-slide
+												.cat-item
+													.cat-item__labels
+														.cat-labels
+															.cat-labels__label.cat-labels__label--red Акция 10.06 / 10.07
+															if ( i == 1)
+																.cat-labels__label.cat-labels__label--yelow Не во всех магазинах
+													if ( i == 1)
+														.cat-item__sale Супер цена
+													else
+														.cat-item__sale 25%
+													a.cat-item__img(href="#")
+														img.swiper-lazy(data-src="img/photos/mc-img-"+i+".jpg")
+														.swiper-lazy-preloader
+													.cat-item__desc
+														a.cat-item__title(href="#")=item
+														.cat-item__volume 300 мл
+														.cat-item__buy
+															.cat-buy
+																.cat-buy__price
+																	.cat-buy__price-curprice
+																		.price 22.
+																			span 99 
+																			i.rub ₽
+																	.cat-buy__price-lastprice
+																		.price 22.
+																			span 99 
+																			i.rub ₽
+																.cat-buy__btn
+																	a.arrow-btn(href="#")
 		include inc/footer.pug
 		include inc/scripts.pug

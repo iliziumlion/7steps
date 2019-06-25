@@ -1,5 +1,5 @@
-import {Swiper, Lazy, Pagination, EffectFade, Autoplay} from 'swiper/dist/js/swiper.esm.js'
 import {domReady} from "./xpage/index"
+import {Swiper, Lazy, Pagination, EffectFade, Autoplay} from 'swiper/dist/js/swiper.esm.js'
 
 Swiper.use([Lazy, Pagination, EffectFade, Autoplay])
 

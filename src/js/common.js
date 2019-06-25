@@ -3,10 +3,10 @@ import "./filter.js"
 
 window.$ = $;
 window.jQuery = $;
+require("./jquery.fancybox.js")
+require("../css/jquery.fancybox.css")
 
 document.addEventListener("DOMContentLoaded", function(){
-	require("./jquery.fancybox.js")
-	require("../css/jquery.fancybox.css")
 
 	$(".fancybox").fancybox({
 		trapFocus: false,

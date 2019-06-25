@@ -48,7 +48,7 @@ img[height]
 [align]
 	margin-bottom: 35px
 
-table
+table:not([class])
 	font-size: 14px
 
 	thead
@@ -74,7 +74,7 @@ table
 
 	&[cellspacing]:not([cellspacing="1"]):not([cellspacing="0"])
 
-table[border="1"], table.styled_table
+table:not([class])[border="1"]
 	min-width: 100%
 
 	td, th
@@ -110,7 +110,7 @@ li
 
 ul
 
-	&.content_ul, &:not([class])
+	&:not([class])
 
 		> li
 			padding-left: 25px
@@ -128,7 +128,7 @@ ul
 		li
 			padding-left: 30px
 
-ol
+ol:not([class])
 	counter-reset: i
 
 	> li

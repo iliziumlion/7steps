@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Акции
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Акции
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									span.bread-crumbs__this Акции
+				.inner-content__content
+					section.stocks__cont
+						.wrapper
+							.stocks
+								.news-list
+									- for (let j = 0; j < 2; j++)
+										- for (let i = 0; i < 3; i++)
+											.news-list__item
+												.news-item
+													.news-item__date 1 июня 2019
+													a.news-item__img(href="#")
+														img(src="img/photos/news-img-"+i+".jpg")
+													.news-item__desc
+														.news-item__desc-cont
+															a.news-item__desc-title(href="#") Салат из запеченного редиса
+															.news-item__desc-btn
+																a.arrow-btn(href="#")
+								.stocks__more
+									a.more-btn(href="#") Показать ещё
+		include inc/footer.pug
+		include inc/scripts.pug

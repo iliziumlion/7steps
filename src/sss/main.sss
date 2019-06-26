@@ -6,6 +6,8 @@
 @import "_title-block.sss"
 @import "_text-styles.sss"
 @import "_form-elements.sss"
+@import "_404.sss"
+@import "_standart-page.sss"
 
 @import "_header.sss"
 @import "main-slider.sss"
@@ -20,6 +22,7 @@
 @import "sort.sss"
 @import "news.sss"
 @import "tovar.sss"
+@import "stocks.sss"
 
 @import "_footer.sss"
 
@@ -54,9 +57,22 @@
 		font-size: 90%
 
 .inner-content
+	display: flex
+	flex-direction: column
 
 	&__title
 		margin: 45px 0 0
 
 	&__content
 		margin: 45px 0 0
+		flex: 1 1 auto
+		display: flex
+		flex-direction: column
+
+		> .wrapper
+			display: flex
+			flex-direction: column
+			flex: 1 1 auto
+			margin: 0
+			align-self: center
+			width: 100%

@@ -1,0 +1,90 @@
+.contacts
+	letter-spacing: .02em
+
+	&__top
+		display: flex
+		align-items: center
+
+		&-map
+			flex: none
+			overflow: hidden
+			border-radius: 5px
+			margin-right: 50px
+
+		&-contacts
+			flex: 1 1 auto
+
+	&__form
+		margin: 55px 0 0
+
+.c-contacts
+
+	&__item
+
+		&:not(:last-child)
+			border-bottom: 1px solid var(--border-color)
+			padding-bottom: 32px
+			margin-bottom: 33px
+
+		&-title
+			font-weight: bold
+
+			&--big
+				font-size: 24px
+				margin: 0 0 15px
+
+			&:not(&--big)
+				text-transform: uppercase
+				color: rgba(32, 39, 48, 0.4)
+				font-size: 11px
+				margin-bottom: 5px
+
+		&-address
+			font-size: 14px
+			line-height: calc(22 / 14)
+			max-width: 315px
+
+			a
+				&[href*="tel"], &[href*="mail"]
+					color: #202730
+					font-size: 20px
+
+.bot-form
+	background: #fff
+	border: 1px solid var(--border-color)
+	border-radius: 5px
+	padding: 40px 45px 55px
+
+	&__title
+		font-weight: bold
+		font-size: 24px
+		margin: 0 0 40px
+
+	&__form
+
+		form
+			display: flex
+
+	&__inputs
+
+		&:first-child
+			flex: none
+
+			&:not(:last-child)
+				width: 366px
+				margin-right: 33px
+
+		&:last-child
+			flex: 1 1 auto
+
+		&-cont
+
+			&:not(:first-child)
+				margin: 28px 0 0
+
+.bf-submit
+	display: flex
+	align-items: center
+
+	&__btn
+		margin-right: 32px

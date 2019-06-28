@@ -19,6 +19,12 @@ module.exports = {
 					},
 					500: {
 						url: {
+							woff: "../fonts/montserrat-medium.woff",
+							woff2: "../fonts/montserrat-medium.woff2"
+						}
+					},
+					600: {
+						url: {
 							woff: "../fonts/montserrat-semibold.woff",
 							woff2: "../fonts/montserrat-semibold.woff2"
 						}

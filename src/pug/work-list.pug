@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Работа в компании
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Работа в компании
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									span.bread-crumbs__this Работа в компании
+				.inner-content__content
+					section.work-page
+						.work-page__advantages
+							.w-advantages
+								.wrapper
+									.w-advantages__title Работа в группе компаний «Семишагофф» – это:
+									.w-advantages__list
+										.w-advantages-list
+											.w-advantages-list__item
+												figure.w-advantages-list__item-img
+													img(src="img/photos/w-advantages-0.svg")
+												figcaption.w-advantages-list__item-text Стабильная выплата конкурентной заработной платы
+											.w-advantages-list__item
+												figure.w-advantages-list__item-img
+													img(src="img/photos/w-advantages-1.svg")
+												figcaption.w-advantages-list__item-text Прозрачная система 
+													br 
+													| мотивации
+											.w-advantages-list__item
+												figure.w-advantages-list__item-img
+													img(src="img/photos/w-advantages-2.svg")
+												figcaption.w-advantages-list__item-text Перспектива 
+													br
+													| карьерного роста
+						.work-page__filter
+							.wrapper
+								.w-filter
+									.w-filter__title Хотите присоединиртся к нашей компанде?
+									.w-filter__text Выберите вакансию или желаемое место работы
+									.w-filter__tabs
+										.w-filter__tabs-tabs
+											.tabs
+												.tabs__link Директора и заместители
+												.tabs__link.active В магазинах
+												.tabs__link На складе
+												.tabs__link В офисе
+										.w-filter__tabs-select
+											select.default-input__input.default-input__input--select
+												<!-- На телефонах и планшетах нужно писать "Выберите странцию" -->
+												option(disabled="") Введите станцию метро, чтобы найти ближайший магазин
+												- for (let i = 0; i < 10; i ++)
+													option=i+" станция"
+									.w-filter__map
+										img(src="img/photos/v-map.jpg")
+						.work-page__list
+							.wrapper
+								.vacancy-list
+									.vacancy-list__item
+										.vacancy
+											header.vacancy__title
+												.vacancy__title-text Директор магазина
+												.vacancy__title-price от 60 000 
+													i.rub ₽
+											main.vacancy__content
+												.vacancy__content-text  
+													p Требуемый опыт работы: 1–3 года
+														br
+														| Полная занятость, сменный график
+													h6 Обязанности:
+													ul
+														li осуществление операций по приему, учету, выдаче и хранению денежных средств; ведение на основе приходных и расходных документов кассовой книги
+														li составление кассовой отчетности
+												.vacancy__content-btns
+													a.white-btn(href="#") Смотреть вакансию
+													a.default-btn(href="#") Записаться на собеседование
+									.vacancy-list__item
+										.vacancy
+											header.vacancy__title
+												.vacancy__title-text Заместитель директора магазина
+												.vacancy__title-price от 41 000 - 51 200 
+													i.rub ₽
+											main.vacancy__content
+												.vacancy__content-text 
+													p Требуемый опыт работы: 3 года
+														br
+														| Полная занятость, сменный график
+													h6 Обязанности:
+													ul
+														li Обслуживание покупателей на кассе
+														li Выкладка товара
+														li Отслеживание сроков годности товара
+												.vacancy__content-btns
+													a.white-btn(href="#") Смотреть вакансию
+													a.default-btn(href="#") Записаться на собеседование
+									.vacancy-list__item
+										.vacancy
+											header.vacancy__title
+												.vacancy__title-text Оператор торгового зала
+												.vacancy__title-price от 21 000 
+													i.rub ₽
+											main.vacancy__content
+												.vacancy__content-text 
+													p Требуемый опыт работы: 1 год
+														br
+														| Полная занятость, сменный график
+													h6 Обязанности:
+													ul
+														li Обслуживание покупателей на кассе
+														li Выкладка товара
+														li Отслеживание сроков годности товара
+												.vacancy__content-btns
+													a.white-btn(href="#") Смотреть вакансию
+													a.default-btn(href="#") Записаться на собеседование
+									.vacancy-list__item
+										.vacancy
+											header.vacancy__title
+												.vacancy__title-text Продавец - кассир
+												.vacancy__title-price от 35 000 
+													i.rub ₽
+											main.vacancy__content
+												.vacancy__content-text 
+													p Требуемый опыт работы: 1–3 года
+														br
+														| Полная занятость, сменный график
+													h6 Обязанности:
+													ul
+														li осуществление операций по приему, учету, выдаче и хранению денежных средств; ведение на основе приходных и расходных документов кассовой книги
+														li составление кассовой отчетности
+												.vacancy__content-btns
+													a.white-btn(href="#") Смотреть вакансию
+													a.default-btn(href="#") Записаться на собеседование
+								.work-page__list-more
+									a.more-btn(href="#") Показать еще
+		include inc/footer.pug
+		include inc/scripts.pug

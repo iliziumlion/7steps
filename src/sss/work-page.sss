@@ -1,0 +1,146 @@
+.work-page
+	letter-spacing: .02em
+
+	&__filter
+		margin: 59px 0 0
+
+	&__list
+		margin: 45px 0 0
+
+		&-more
+			margin: 57px 0 0
+			text-align: center
+
+.w-advantages
+	background: url("../img/photos/work-bg.jpg") center no-repeat
+	background-size: cover
+	text-align: center
+	color: #fff
+	padding: 67px 0 65px
+
+	&__title
+		font-size: 24px
+		font-weight: 500
+		margin: 0 0 75px
+
+.w-advantages-list
+	display: flex
+	justify-content: center
+
+	&__item
+		padding: 0 10px
+		width: 345px
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		&-img
+			background: var(--main-color)
+			border-radius: 5px
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 10px
+			size: 104px
+			margin: 0 0 49px
+
+		&-text
+			font-size: 18px
+			line-height: calc(27 / 18)
+			max-width: 330px
+
+.w-filter
+
+	&__title, &__text
+		text-align: center
+
+	&__title
+		font-weight: 500
+		font-size: 24px
+
+	&__text
+		color: #6F757B
+		font-size: 14px
+		margin: 15px 0 0
+
+	&__tabs
+		display: flex
+		margin: 60px 0 0
+
+		&-tabs
+			flex: 1 1 auto
+			margin-right: 63px
+
+		&-select
+			flex: 1 1 auto
+
+	&__map
+		margin: 40px 0 0
+
+.tabs
+	display: flex
+	background: var(--second-color)
+	border-radius: 5px
+
+	&__link
+		border-radius: inherit
+		padding: 13px 22px 14px
+		transition: background-color .3s ease
+		color: #fff
+		text-align: center
+		flex: 1 1 auto
+
+		&:not(.active)
+			cursor: pointer
+
+		&.active
+			background: var(--main-color)
+
+.vacancy-list
+
+	&__item
+
+		&:not(:first-child)
+			margin: 22px 0 0
+
+.vacancy
+	border: 1px solid var(--border-color)
+	border-radius: 5px
+	background: #fff
+
+	&__title
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-weight: 500
+		line-height: calc(24 / 19)
+		padding: 26px 43px
+		border-bottom: 1px solid var(--border-color)
+
+		&-text
+			font-size: 19px
+
+		&-price
+			white-space: nowrap
+			margin-left: 10px
+			font-size: 20px
+
+	&__content
+		padding: 38px 43px 37px
+		display: flex
+		justify-content: space-between
+
+		&-text
+			color: #6F757B
+			max-width: 620px
+
+		&-btns
+			display: flex
+			align-items: flex-start
+
+			.white, .default
+
+				&-btn
+
+					&:not(:last-child)
+						margin-right: 18px

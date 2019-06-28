@@ -249,9 +249,17 @@
 		justify-content: space-between
 		align-items: center
 		padding: 30px 44px 30px 30px
+		transition: border-color .3s ease, background .3s ease
 
 		&:not(:first-child)
 			border-top: 1px solid var(--border-color)
+
+		&.active
+			background: #fff
+			border-radius: 5px
+
+			+ .points-list__item
+				border-color: transparent
 
 	&__time
 		min-height: 15px

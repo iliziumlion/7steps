@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Продавец - кассир
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Продавец - кассир
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Работа в компании
+									span.bread-crumbs__this Продавец - кассир
+				.inner-content__content
+					section.vacancy-detail__cont
+						.wrapper
+							.vacancy-detail
+								.vacancy-detail__text
+									.v-text
+										.v-text__title от 35 000 
+											i.rub ₽
+										.v-text__text
+											p Требуемый опыт работы: 1–3 года
+												br
+												| Полная занятость, сменный график
+											h5
+												b Обязанности:
+											ul
+												li осуществление операций по приему, учету, выдаче и хранению денежных средств; ведение кассовой книги на основе приходных и расходных документов; 
+												li составление кассовой отчетности;
+												li продажа сопутствующих товаров клиентам, представленных на кассе, работа на кассовом аппарате, сдача дневной выручки.
+											h5
+												b Требования:
+											p Знание ПК (обязательно), знание программы 1С (желательно); желание работать в стабильной компании; обязателен опыт работы кассиром-операционистом; обязателен опыт работы с банковским терминалом.
+											h5
+												b Условия:
+											ul
+												li График работы 2/2 с 9-00 до 19-00
+												li Зарплата от 25 000 руб.
+												li График работы 5/2
+								.vacancy-detail__map
+									.stock-map
+										.stock-map__map
+											.s-map
+												.s-map__points
+													ul.points-list
+														- for (let i = 0; i < 10; i++)
+															each point, j in [{address: "проспект Большевиков, 24", metro: "Ст. м. Улица Дыбенко"}, {address: "улица Васи Алексеева, 10", metro: "Ст. м. Кировский завод"}, {address: "Бухарестская улица, 31к1", metro: "Ст. м. Международная"}, {address: "Ленская улица, 18", metro: "Ст. м. Ладожская"}, ]
+																if (j == 0 && i == 0)
+																	li.points-list__item.active
+																		.points-list__address
+																			.point-address
+																				address.point-address__address=point.address
+																				.point-address__metro=point.metro
+																		time.points-list__time
+																			span Пн. - вс.: 09:00 - 23:00
+																else
+																	li.points-list__item
+																		.points-list__address
+																			.point-address
+																				address.point-address__address=point.address
+																				.point-address__metro=point.metro
+																		time.points-list__time
+																			span Пн. - вс.: 09:00 - 23:00
+												.s-map__map 
+													img(src="img/photos/tovar-map.jpg")
+								.vacancy-detail__form
+									.bot-form
+										.bot-form__title Записаться на собеседование
+										.bot-form__form
+											form(action="#")
+												.bot-form__inputs
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="text" required="")
+															label.default-input__label Фамилия
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="tel" required="" placeholder="+7 (___) ___-__-__")
+															label.default-input__label Телефон
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															select.default-input__input.default-input__input--select
+																option Продавец-кассир
+																option Продавец-кассир
+																option Продавец-кассир
+															label.default-input__label интересующая вакансия
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															select.default-input__input.default-input__input--select
+																option Другое
+																option Другое
+																option Другое
+															label.default-input__label Адрес магазина
+															.forms__error-message
+												.bot-form__inputs.bot-form__inputs--2
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="text" required="")
+															label.default-input__label Имя
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="text" required="")
+															label.default-input__label Отчество
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															select.default-input__input.default-input__input--select(required="")
+																option(disabled="") Выберите магазин
+																option Бухарестская улица, 31к1
+																option Бухарестская улица, 31к1
+																option Бухарестская улица, 31к1
+																option Бухарестская улица, 31к1
+															label.default-input__label Адрес магазина
+															.forms__error-message
+													.bot-form__inputs-cont.bot-form__inputs-cont--textarea
+														.default-input
+															textarea.default-input__input.default-input__input--textarea
+															label.default-input__label Комментарий
+															.forms__error-message
+												.bf-submit
+													.bf-submit__btn 
+														input.default-btn(type="submit" value="Отправить")
+													.bf-submit__text
+														.form-req Нажимая кнопку, Вы даете информированное согласие на 
+															a(href="#") обработку своих персональных данных
+		include inc/footer.pug
+		include inc/scripts.pug

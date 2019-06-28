@@ -64,27 +64,45 @@
 
 		form
 			display: flex
+			flex-wrap: wrap
 
 	&__inputs
+		flex: 1 1 auto
 
-		&:first-child
+		&--2
+			display: flex
+			flex-wrap: wrap
+			margin: 0 0 -28px -33px
+
+			.bot-form__inputs-cont
+				width: calc((100% - 33px * 2) / 2)
+				margin: 0 0 28px 33px !important
+
+				&--textarea
+					width: calc(100% - 33px)
+
+		&:first-of-type
 			flex: none
 
 			&:not(:last-child)
 				width: 366px
 				margin-right: 33px
 
-		&:last-child
-			flex: 1 1 auto
+		&:not(:first-of-type)
+			width: calc(100% - 399px)
 
 		&-cont
 
-			&:not(:first-child)
+			&:not(:first-of-type)
 				margin: 28px 0 0
+
+		~ .bf-submit
+			margin: 35px 0 0
 
 .bf-submit
 	display: flex
 	align-items: center
+	width: 100%
 
 	&__btn
 		margin-right: 32px

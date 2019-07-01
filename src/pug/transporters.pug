@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Грузоперевозчикам
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Грузоперевозчикам
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Партнёрам
+									span.bread-crumbs__this Грузоперевозчикам
+				.inner-content__content
+					section.partners__cont
+						.wrapper
+							.partners
+								.partners__links
+
+									- var links = ["Поставщикам", "Арендаторам", "Арендодателям", "Грузоперевозчикам", "Рекламодателям", ]
+									- var curPage = 3
+
+									each link, i in links
+										if (i == curPage)
+											a.partners-link.active(href="#")=link
+										else
+											a.partners-link(href="#")=link
+									select.partners__links-select.no-selectize
+										each link, i in links
+											if (i == curPage)
+												option(value=i selected="")=link
+											else
+												option(value=i)=link
+								.partners__text
+									.partners-text
+										.partners-text__text
+											p Торговая сеть «Семишагофф» использует смешанную систему поставок: прямые поставки непосредственно в магазины и поставки через распределительный центр. Приглашаем к постоянному сотрудничеству собственников грузовых транспортных средств (ИП, ООО) грузоподъёмностью от 5 до 15 тонн, оснащенных изотермическим фургоном или изотермическим фургоном с холодильно-отопительной установкой, а также гидроподъёмным бортом. Владельцев транспортных средств, соответствующих этим требованиям, просим направить предложение о сотрудничестве в форме обратной связи.
+										.partners-text__btn
+											a.default-btn(href="#") Отправить коммерческое предложение
+								.partners__content
+									.transporters
+										.transporters__map
+											img(src="img/photos/trans-map.jpg")
+										.transporters__form
+											.bot-form
+												.bot-form__form
+													form(action="#")
+														.bot-form__props
+															span.bot-form__top
+																.bot-form__top-title
+																	.bt-title
+																		.bt-title__title
+																			.bt-title__title-text Отправить предложение о сотрудничестве
+																			.bt-title__title-subtitle Мы рассмотрим ваше обращение и ответим на электронный адрес
+															.bot-form__inputs.bot-form__inputs--3
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text" required="")
+																		label.default-input__label Наименование компании
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="tel" placeholder="+7 (___) ___-__-__" required="")
+																		label.default-input__label Телефон
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="email" placeholder="info@gmail.com")
+																		label.default-input__label E-mail
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text")
+																		label.default-input__label Сайт
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text")
+																		label.default-input__label Контактное лицо
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text")
+																		label.default-input__label Адрес
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text")
+																		label.default-input__label Площадь
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text")
+																		label.default-input__label Наличие водоснабжения
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text")
+																		label.default-input__label Количество КВт
+																		.forms__error-message
+																.bot-form__inputs-cont.bot-form__inputs-cont--textarea
+																	.default-input
+																		textarea.default-input__input.default-input__input--textarea
+																		label.default-input__label Сообщение
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.bf-submit
+																		.bf-submit__btn
+																			input.default-btn(type="submit" value="Отправить")
+																		.bf-submit__text
+																			.form-req Нажимая кнопку, Вы даете информированное согласие на 
+																				a(href="#") обработку своих персональных данных
+			include inc/footer.pug
+		include inc/scripts.pug

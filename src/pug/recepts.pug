@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Рецепты
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Рецепты
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Покупателям
+									span.bread-crumbs__this Рецепты
+				.inner-content__content
+					.recipes-cont
+						.wrapper
+							.recipes
+								.recipes-aside
+									.recipes__links
+										.recipes__link.active
+											a(href="#") Первые блюда
+										.recipes__link
+											a(href="#") Вторые блюда
+										.recipes__link
+											a(href="#") Салаты
+										.recipes__link
+											a(href="#") Закуски
+										.recipes__link
+											a(href="#") Десерты
+										.recipes__link
+											a(href="#") Напитки
+
+
+
+
+
+
+								.recipes__list
+									- for (let j = 0; j < 5; j++)
+										.recipes__item
+											div
+												a(href="").recipes__item-img
+													.recipes__item-label Обед за 100 рублей
+													img(src="img/photos/recepe-1.jpg")
+												.recipes__item-info
+													.recipes__item-title Сырный суп по‑французски с курицей
+													.recipes__item-text На этой странице вы можете оставить свой отзыв или жалобу по работе магазина «Семишагофф», задать вопрос или высказать пожелания. Все обращения передаются компетентным...
+													.recipes__item-bot
+														.recipes-el.ico-ingredient 10 ингредиентов
+														.recipes-el.ico-count 2 порции
+														.recipes-el.ico-time 120 минут
+
+									.cat2__list-more
+										a.more-btn(href="#") Показать ещё
+									
+		include inc/footer.pug
+		include inc/scripts.pug

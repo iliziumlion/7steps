@@ -65,7 +65,7 @@ blockquote
 		display: block
 		margin: 0
 
-table
+table:not([class])
 	margin: 52px 0 20px
 
 	thead
@@ -91,7 +91,7 @@ table
 
 	&[cellspacing]:not([cellspacing="1"]):not([cellspacing="0"])
 
-table[border="1"]
+table[border="1"]:not([class])
 	min-width: 100%
 
 	td, th
@@ -155,3 +155,14 @@ ol:not([class])
 		li
 			font-weight: 300
 			margin: 23px 0 0 !important
+
+
+@media (max-width: 660px)
+	[align]
+		float: none
+		width: 100%
+		margin-left: 0
+		margin-right: 0
+
+		img
+			width: inherit

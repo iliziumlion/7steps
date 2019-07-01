@@ -37,3 +37,76 @@
 			line-height: calc(21 / 16)
 			font-size: 16px
 			// max-width: 190px
+
+@media (max-width: 1200px) and (min-width: 880px)
+	.cat-list
+		margin: 0 0 -30px -20px
+
+		&__item
+			width: calc((100% - 20px * 3) / 3)
+			margin: 0 0 30px 20px
+
+@media (max-width: 880px) and (min-width: 660px)
+	.cat-list
+		margin: 0 0 -30px -20px
+
+		&__item
+			width: calc((100% - 20px * 2) / 2)
+			margin: 0 0 30px 20px
+
+@media (max-width: 660px)
+	.cat-list
+		margin: 0
+		display: block
+
+		&__item
+			margin: 0
+			width: auto
+
+			&:last-child
+
+				.catalog-item
+
+					&__title
+
+						&-text
+							border-bottom: 1px solid var(--border-color)
+
+	.catalog-item
+
+		&__title
+
+			&-text
+				width: 100%
+				border-top: 1px solid var(--border-color)
+				padding: 10px 50px 10px 20px
+				display: block
+				background: #fff
+				transition: color .3s ease, border-color .3s ease, background-color .4s ease
+				position: relative
+
+				&:after
+					content: ""
+					position: absolute calc(50% - 3px) 20px * 8
+					size: 6px
+					transform: rotateZ(-45deg)
+					border-right: 1px solid var(--main-color)
+					border-bottom: 1px solid var(--main-color)
+					transition: border-color .3s ease
+
+				&:hover, &:focus
+					color: #fff
+					background-color: var(--main-color)
+					border-color: transparent
+
+					&:after
+						border-color: #fff
+
+			&-btn
+				display: none
+
+		&__img
+			display: none
+
+	.catalog
+		margin: 0 -20px

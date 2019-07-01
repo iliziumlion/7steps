@@ -56,3 +56,42 @@
 
 		&.active
 			background: url("../img/ico-list-active.svg") no-repeat
+
+@media (max-width: 1000px)
+	.sort
+		padding: 20px
+
+		&__view
+			padding-left: 40px
+			margin-left: auto
+
+		&__filter
+			order: -2
+			margin-right: 15px
+
+		&__select
+			margin: 0 !important
+			order: -1
+
+			&:not(:first-child), &-label
+				display: none
+
+			&-select
+				padding: 0
+				text-indent: -9999px
+				background: url("../img/ico-sort.svg") center no-repeat
+				background-size: contain
+				size: 36px 19px
+				cursor: pointer
+
+				option
+					text-indent: 0
+
+		&__filter
+			display: block
+
+	.filter-btn
+		size: 22px
+		cursor: pointer
+		background: url("../img/ico-filter.svg") no-repeat
+		background-size: contain

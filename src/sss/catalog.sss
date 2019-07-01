@@ -215,3 +215,34 @@
 .seo-text
 	font-size: 13px
 	line-height: calc(21 / 13)
+
+@media (max-width: 1200px)
+	.cat-item
+
+		&__desc
+			padding: 20px
+
+@media (max-width: 1200px) and (min-width: 1000px), (max-width: 880px) and (min-width: 660px)
+	.cat2-list:not(.cat2-list--list)
+		margin: 0 0 -20px -20px
+
+		.cat2-list__item
+			width: calc((100% - 20px * 2) / 2)
+			margin: 0 0 20px 20px
+
+@media (max-width: 1000px)
+	.cat2
+
+		&__filter
+			display: none
+
+		&__list
+			width: auto
+
+@media (max-width: 660px)
+	.cat2-list:not(.cat2-list--list)
+		margin: 0 0 -20px -20px
+
+		.cat2-list__item
+			width: calc(100% - 20px)
+			margin: 0 0 20px 20px

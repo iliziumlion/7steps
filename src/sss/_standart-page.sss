@@ -42,3 +42,27 @@
 			font-size: 48px
 			line-height: calc(53 / 48)
 			max-width: 500px
+
+@media (max-width: 1200px) and (min-width: 1000px)
+	.sp-banner
+
+		&__text
+			padding: 30px 60px
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.sp-banner
+
+		&__text
+			padding: 20px
+
+			&-title
+				font-size: 2.4em
+
+@media (max-width: 660px)
+	.sp-banner
+
+		&__text
+			display: none
+
+		&__img, &__img img
+			width: 100%

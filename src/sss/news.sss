@@ -56,3 +56,35 @@
 			display: flex
 			align-items: center
 			justify-content: space-between
+
+@media (max-width: 1200px) and (min-width: 660px)
+	.news-list
+
+		&__item
+			width: calc((100% - 21px * 2) / 2)
+
+@media (max-width: 1000px)
+	.news-item
+
+		&__date
+			padding: 12px 20px
+			top: 20px
+			left: 20px
+
+		&__desc
+			padding: 20px
+
+			&-title
+				font-size: 1.3em
+
+@media (max-width: 660px)
+	.news-list
+		display: block
+		margin: 0
+
+		&__item
+			margin: 0
+			width: auto
+
+			&:not(:first-child)
+				margin: 22px 0 0

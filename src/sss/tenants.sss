@@ -1,0 +1,102 @@
+.tenants
+
+	&__contacts, &__form
+		margin: 52px 0 0
+
+
+.tenants-list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -20px -20px
+
+	&__item
+		width: calc((100% - 20px * 5) / 5)
+		margin: 0 0 20px 20px
+
+.tenant
+	display: flex
+	justify-content: center
+	align-items: center
+	background: #fff
+	border: 1px solid var(--border-color)
+	border-radius: 5px
+	height: 107px
+	padding: 15px 20px
+
+	img
+		max-height: 100%
+
+.tenant-slider
+	padding: 53px 0 64px
+
+	&__title
+		text-align: center
+		font-size: 500px
+		font-size: 22px
+		letter-spacing: .02em
+		line-height: 1
+		margin: 0 0 40px
+
+	&__slider
+		position: relative
+
+		.swiper-button
+
+			&-prev, &-next
+				position: absolute
+				top: calc(50% - 25px)
+
+			&-prev
+				right: calc(100% + 21px)
+				left: auto
+
+			&-next
+				left: calc(100% + 21px)
+
+.tns-slider
+	overflow: hidden
+
+	.cat-item
+		padding: 0
+
+		&__img
+			margin: -1px
+			height: 232px
+			border-radius: 5px 5px 0 0
+			overflow: hidden
+
+		&__desc
+			padding-top: 25px
+
+.ten-contacts
+	color: #fff var(--main-color)
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 32px 65px 33px 50px
+
+	&__title
+		font-weight: 500
+		font-size: 22px
+		position: relative
+		padding-left: 50px
+
+		&:before
+			content: ""
+			position: absolute calc(50% - 9px) * * 0
+			background: url("../img/ico-pers.svg") no-repeat
+			size: 16px 17px
+
+.ten-phone, .ten-mail
+	display: flex
+	align-items: center
+
+	a
+		color: inherit
+		font-size: 20px
+
+	span
+		margin-left: 8px
+		color: rgba(255,255,255, .8)
+		font-size: 11px
+		text-transform: uppercase

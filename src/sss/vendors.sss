@@ -1,0 +1,75 @@
+.vendors
+
+	&__form
+		margin: 40px 0 0
+
+.file-list
+
+	&__item
+
+		&:not(:first-child)
+			margin: 22px 0 0
+
+	&__link
+		border-radius: 5px
+		border: 1px solid var(--border-color)
+		background: url("../img/ico-file.svg") left 37px center no-repeat, #fff
+		padding: 45px 33px 46px 95px
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		&:hover
+
+			.download-link
+
+				&:after
+					background-color: lighten(#CC2128, .1)
+
+			.more-link
+
+				&:after
+					background-color: var(--main-color)
+
+		&-text
+			flex: 1 1 auto
+			font-weight: 500
+			font-size: 18px
+
+		&__btn
+			flex: none
+			margin-left: 30px
+			color: #6F757B
+			font-size: 14px
+
+.download-link, .more-link
+	padding-right: 50px
+	position: relative
+	color: inherit
+
+	&:after
+		content: ""
+		border-radius: 50%
+		size: 30px
+		transition: background-color .3s ease
+		position: absolute calc(50% - 15px) 0 * *
+
+.download-link
+
+	&:after
+		background: url("../img/ico-arrow-bot.svg") center no-repeat, var(--main-color)
+
+	&:hover
+
+		&:after
+			background-color: lighten(#CC2128, .1)
+
+.more-link
+
+	&:after
+		background: url("../img/ico-white-arrow.svg") center no-repeat, var(--second-color)
+
+	&:hover
+
+		&:after
+			background-color: var(--main-color)

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Поставщикам
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Поставщикам
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Партнёрам
+									span.bread-crumbs__this Поставщикам
+				.inner-content__content
+					section.partners__cont
+						.wrapper
+							.partners
+								.partners__links
+
+									- var links = ["Поставщикам", "Арендаторам", "Арендодателям", "Грузоперевозчикам", "Рекламодателям", ]
+									- var curPage = 0
+
+									each link, i in links
+										if (i == curPage)
+											a.partners-link.active(href="#")=link
+										else
+											a.partners-link(href="#")=link
+									select.partners__links-select.no-selectize
+										each link, i in links
+											if (i == curPage)
+												option(value=i selected="")=link
+											else
+												option(value=i)=link
+								.partners__text
+									.partners-text
+										.partners-text__text
+											h3 Уважаемые представители компаний,
+												br
+												| намеренные сотрудничать с ГК «Семишагофф»!
+											p Компания «Семишагофф» всегда рада сотрудничеству с добросовестными партнерами, которые настроены на долгосрочное сотрудничество и способны обеспечить стабильные поставки. 
+												br
+												| В соответствии с ч. 1 ст. 9 Федерального закона от 28.12.2009 № 381-ФЗ «Об основах регулирования торговой деятельности в Российской Федерации» публикуем информацию об условиях и порядке отбора контрагентов для заключения договора поставки продовольственных товаров, либо договора на производство продукции под товарным знаком заказчика с Группой Компаний «Семишагофф».
+												br
+												| Пожалуйста, изучите также критерии выбора поставщика и политику ЭДО  «Семишагофф», расположенные ниже.
+												br
+												| Договоры на поставку с торговой сетью «Семишагофф» заключаются в типовой форме.  Во избежание недоразумений, пожалуйста, ознакомьтесь с руководством по заключению договоров.
+												br
+												| Если вы заинтересованы в сотрудничестве с торговой сетью «Семишагофф», вам потребуется заполнить типовую анкету в электронном виде.
+												br
+												| Форма анкеты для скачивания доступна по данной ссылке .
+												br
+												| Мы готовы работать и сотрудничать с Поставщиками, которые обеспечат понимание и исполнение требований, изложенных в Требованиях, предъявляемых к поставщикам Группы Компаний «Семишагофф».
+											p Предложения с указанием контактной информации отправляйте через форму обратной связи.
+												br
+												| Если ваше предложение нас заинтересует, сотрудник коммерческого подразделения обязательно свяжется с вами.
+										.partners-text__btn
+											a.default-btn(href="#") Подать заявку поставщика
+								.partners__content
+									.vendors
+										.vendors__files
+											ul.file-list
+												li.file-list__item
+													a.file-list__link(href="#" download="Анкета для потенциального партнера.docx")
+														span.file-list__link-text Анкета для потенциального партнера
+														span.file-list__link-btn
+															span.download-link Скачать
+												each item in ["Критерии выбора поставщика Группы Компаний Семишагофф", "Политика ЭДО", "Рекомендации по доставке", "Руководство по заключению договоров", "Требования, предъявляемые к поставщикам Группы Компаний Семишагофф", ]
+													li.file-list__item
+														a.file-list__link(href="#")
+															span.file-list__link-text=item
+															span.file-list__link-btn
+																span.more-link Подробнее
+										.vendors__form
+											.bot-form
+												.bot-form__form
+													form(action="#")
+														.bot-form__props
+															span.bot-form__top
+																.bot-form__top-title
+																	.bt-title
+																		.bt-title__title
+																			.bt-title__title-text Отправить коммерческое предложение
+																			.bt-title__title-subtitle Мы рассмотрим ваше обращение и дадим ответ на электронных адрес
+															.bot-form__inputs
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text" required="" placeholder="semishagoff")
+																		label.default-input__label Наименование компании
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text" placeholder="semishagoff.ru")
+																		label.default-input__label Сайт
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text" placeholder="semishagoff")
+																		label.default-input__label Тема сообщения
+																		.forms__error-message
+																
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input.default-input__input--file(type="file" id="bf-file-0")
+																		input.default-input__input.default-input__input--file-support(type="text" placeholder="Docx, exсel, pdf, jpg, png" readonly="")
+																		label.default-input__label Прикрепить файл
+																		label.default-input__label--file(for="bf-file-0") 
+																		.forms__error-message
+															.bot-form__inputs.bot-form__inputs--2
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input.default-input__input--error(type="tel" placeholder="+7 (___) ___-__-__" required="")
+																		label.default-input__label Телефон
+																		.forms__error-message Ошибка ввода
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="email" required="" placeholder="info@gmail.com")
+																		label.default-input__label E-mail
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text" placeholder="Надежда")
+																		label.default-input__label Контактное лицо
+																		.forms__error-message
+																.bot-form__inputs-cont.bot-form__inputs-cont--textarea
+																	.default-input
+																		textarea.default-input__input.default-input__input--textarea
+																		label.default-input__label Сообщение
+																		.forms__error-message
+															.bf-submit
+																.bf-submit__btn
+																	input.default-btn(type="submit" value="Отправить")
+																.bf-submit__text
+																	.form-req Нажимая кнопку, Вы даете информированное согласие на 
+																		a(href="#") обработку своих персональных данных
+			include inc/footer.pug
+		include inc/scripts.pug

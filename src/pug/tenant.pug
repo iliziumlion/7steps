@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Арендаторам
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Арендаторам
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Партнёрам
+									span.bread-crumbs__this Арендаторам
+				.inner-content__content
+					section.partners__cont
+						.wrapper
+							.partners
+								.partners__links
+
+									- var links = ["Поставщикам", "Арендаторам", "Арендодателям", "Грузоперевозчикам", "Рекламодателям", ]
+									- var curPage = 1
+
+									each link, i in links
+										if (i == curPage)
+											a.partners-link.active(href="#")=link
+										else
+											a.partners-link(href="#")=link
+									select.partners__links-select.no-selectize
+										each link, i in links
+											if (i == curPage)
+												option(value=i selected="")=link
+											else
+												option(value=i)=link
+								.partners__text
+									.partners-text
+										.partners-text__text
+											h3 Требования к арендуемым помещениям:
+											p Группа компаний «Семишагофф» приглашает к долгосрочному и взаимовыгодному сотрудничеству активно развивающихся Арендаторов. Готовы предложить площади от 1 кв.метра в торговых центрах, прикассовых зонах и на прилегающих к магазинам площадях. Магазины «Семишагофф» обеспечивают высокую проходимость покупателей и, как следствие, способствуют высоким объемам продаж. 
+												br
+												| Обращаем ваше внимание на то, что мы рассматриваем арендаторов с любыми видами деятельности, за исключением продажи продуктов питания.
+												br
+												| Со списком актуальных предложений для арендаторов можно ознакомиться ниже. 
+											br
+											h3 Наши арендаторы
+											p Если вас заинтересовали свободные площади, отправьте заявку через форму обратной связи. 
+												br
+												| Дополнительные вопросы можете отправить нашему специалисту.
+												br
+												| При одобрении заявки наш специалист свяжется с Вами. В случае отсутствия свободных площадей для аренды в наших магазинах, ваша заявка будет сохранена в базе потенциальных Арендаторов. 
+												br 
+												| Благодарим за проявленный интерес к нашей компании!
+										.partners-text__btn
+											a.default-btn(href="#") Подать заявку поставщика
+								.partners__content
+									.tenants
+										.tenants__list
+											.tenants-list
+												- for (let i = 0; i < 12; i++)
+													.tenants-list__item
+														a.tenant(href="#")
+															img(src="img/photos/tenant-img-"+i+".jpg")
+						.partners__cont-slider
+							.wrapper
+								.tenant-slider
+									.tenant-slider__title Актуальные предложения
+									.tenant-slider__slider
+										.swiper-button-prev
+										.tns-slider
+											.swiper-wrapper
+												- for (let i = 0; i < 3; i++)
+													- for (let j = 0; j < 4; j++)
+														.swiper-slide
+															.cat-item
+																figure.cat-item__img
+																	if (j == 0 && i == 0)
+																		img(src="img/photos/tenant-slider-img-"+j+".jpg" alt='Лиговсий 28, ТРК "Парус"')
+																	else
+																		img.swiper-lazy(data-src="img/photos/tenant-slider-img-"+j+".jpg" alt='Лиговсий 28, ТРК "Парус"')
+																		.swiper-lazy-preloader
+																.cat-item__desc
+																	.cat-item__title Лиговсий 28,
+																		br
+																		| ТРК "Парус"
+																	.cat-item__volume Площадь: 4м
+																		sup 2
+																	.cat-item__buy
+																		.cat-buy
+																			.cat-buy__price
+																				.cat-buy__price-curprice
+																					.price 13 000 руб./мес
+																	.cat-item__btn
+																		a.default-btn(href="#") Подать заявку
+										.swiper-button-next
+						.tenants
+							.wrapper
+								.tenants__contacts
+									.ten-contacts
+										.ten-contacts__title Корпоративный отдел
+										.ten-contacts__phone
+											address.ten-phone
+												a(href="tel: 8-812-244-77-55") 8-812-244-77-55 доб.1132
+												span Позвоните нам
+										.ten-contacts__mail
+											address.ten-mail
+												a(href="mailto: contract.group@7shagov.org") contract.group@7shagov.org
+												span e-mail
+								.tenants__form
+									.bot-form
+										.bot-form__form
+											form(action="#")
+												.bot-form__props
+													span.bot-form__top
+														.bot-form__top-title
+															.bt-title
+																.bt-title__title
+																	.bt-title__title-text Отправить предложение о сотрудничестве
+																	.bt-title__title-subtitle Мы рассмотрим ваше обращение в течении трех рабочих дней
+																.bt-title__select
+																	select.default-input__input.default-input__input--select
+																		option(disabled="") Введите адрес магазина
+																		- for (let i = 0; i < 10; i ++)
+																			option=i+" магазин"
+														.bot-form__top-map
+															.bf-map
+																img(src="img/photos/v-map.jpg")
+													.bot-form__inputs
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text" required="")
+																label.default-input__label Наименование компании
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text" required="")
+																label.default-input__label Адрес сайта
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																select.default-input__input.default-input__input--select
+																	- for (let i = 0; i < 10; i ++)
+																		option=i+" магазин"
+																label.default-input__label Адрес магазина
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																select.default-input__input.default-input__input--select
+																	- for (let i = 0; i < 10; i ++)
+																		option=i+" КВт"
+																label.default-input__label Количеств КВт
+																.forms__error-message 
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input.default-input__input--file(type="file" id="bf-file-0" required="")
+																input.default-input__input.default-input__input--file-support(type="text" placeholder="Docx, exсel, pdf, jpg, png" readonly="")
+																label.default-input__label Прикрепить файл
+																label.default-input__label--file(for="bf-file-0") 
+																.forms__error-message
+													.bot-form__inputs.bot-form__inputs--2
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="tel" placeholder="+7 (___) ___-__-__" required="")
+																label.default-input__label Телефон
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="email" placeholder="info@gmail.com")
+																label.default-input__label E-mail
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text" required="")
+																label.default-input__label Контактное лицо
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text" required="")
+																label.default-input__label Вид деятельности
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																select.default-input__input.default-input__input--select
+																	- for (let i = 0; i < 10; i ++)
+																		option=i+" м2"
+																label.default-input__label Желаемая площадь
+																.forms__error-message 
+														.bot-form__inputs-cont
+															.default-input
+																select.default-input__input.default-input__input--select
+																	option(selected="") Нет
+																	option Да
+																label.default-input__label Наличие водоснабжения
+																.forms__error-message 
+														.bot-form__inputs-cont.bot-form__inputs-cont--textarea
+															.default-input
+																textarea.default-input__input.default-input__input--textarea
+																label.default-input__label Сообщение
+																.forms__error-message
+													.bf-submit
+														.bf-submit__btn
+															input.default-btn(type="submit" value="Отправить")
+														.bf-submit__text
+															.form-req Нажимая кнопку, Вы даете информированное согласие на 
+																a(href="#") обработку своих персональных данных
+			include inc/footer.pug
+		include inc/scripts.pug

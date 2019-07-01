@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Арендодателям
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Арендодателям
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Партнёрам
+									span.bread-crumbs__this Арендодателям
+				.inner-content__content
+					section.partners__cont
+						.wrapper
+							.partners
+								.partners__links
+
+									- var links = ["Поставщикам", "Арендаторам", "Арендодателям", "Грузоперевозчикам", "Рекламодателям", ]
+									- var curPage = 2
+
+									each link, i in links
+										if (i == curPage)
+											a.partners-link.active(href="#")=link
+										else
+											a.partners-link(href="#")=link
+									select.partners__links-select.no-selectize
+										each link, i in links
+											if (i == curPage)
+												option(value=i selected="")=link
+											else
+												option(value=i)=link
+								.partners__text
+									.partners-text
+										.partners-text__text
+											h3 Требования к арендуемым помещениям:
+											p Группа компаний «Семишагофф» всегда стремится выстраивать отношения с партнёрами на принципах прозрачного, организованного и взаимовыгодного сотрудничества.
+												br
+												| Наша компания готова рассмотреть любые формы сделок, направленных на приобретение прав аренды, собственности помещений, зданий, земельных участков для размещения магазинов, в соответствии с планом развития сети. Нас интересуют существующие помещения, объекты нового строительства и земельные участки. Мы готовы рассмотреть предложения от собственников помещений, девелоперов и управляющих компаний, специализированных агентств и частных лиц, работающих на рынке коммерческой недвижимости.
+												br
+												| Как ответственный арендатор и надежный партнер, мы своевременно исполняем все обязательства, обеспечиваем комплексный подход к эксплуатации арендуемого объекта и содержим в порядке прилегающую территорию.
+											br
+											h3 Основные требования:
+											p Расположение: Населенный пункт, в котором проживает более 4 000 человек. Первая линия домов с примыкающей парковкой для покупателей. Возможность организации дебаркадера для разгрузки грузового автомобиля длиной не менее 12 метров.
+											br
+											| Помещение:
+											br
+											| Общая площадь помещения от 350 м² до 2 500 м². Торговый зал должен располагаться на первом этаже и иметь отдельный центральный вход-выход. Подсобные помещения должны находиться на одном уровне с торговым залом. Высота потолка должна быть не менее 3 метров. К объекту должны быть подведены все необходимые коммуникации: водоснабжение, теплоснабжение, электроснабжение (минимум 40 кВт), канализация, каналы связи.
+											p Заявки с указанием контактной информации отправляйте через форму обратной связи.
+												br
+												| Если ваше предложение нас заинтересует, мы обязательно свяжемся с вами.
+										.partners-text__btn
+											a.default-btn(href="#") Подать заявку поставщика
+						.tenants
+							.wrapper
+								.tenants__contacts
+									.ten-contacts
+										.ten-contacts__title Корпоративный отдел
+										.ten-contacts__phone
+											address.ten-phone
+												a(href="tel: 8-812-244-77-55") 8-812-244-77-55 доб.1132
+												span Позвоните нам
+										.ten-contacts__mail
+											address.ten-mail
+												a(href="mailto: contract.group@7shagov.org") contract.group@7shagov.org
+												span e-mail
+								.tenants__form
+									.bot-form
+										.bot-form__form
+											form(action="#")
+												.bot-form__props
+													span.bot-form__top
+														.bot-form__top-title
+															.bt-title
+																.bt-title__title
+																	.bt-title__title-text Отправить предложение о сотрудничестве
+																	.bt-title__title-subtitle Мы рассмотрим ваше обращение и ответим на электронный адрес
+													.bot-form__inputs.bot-form__inputs--3
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text" required="")
+																label.default-input__label Наименование компании
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="tel" placeholder="+7 (___) ___-__-__" required="")
+																label.default-input__label Телефон
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="email" placeholder="info@gmail.com")
+																label.default-input__label E-mail
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text")
+																label.default-input__label Сайт
+																.forms__error-message
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text")
+																label.default-input__label Контактное лицо
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text")
+																label.default-input__label Адрес
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text")
+																label.default-input__label Площадь
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text")
+																label.default-input__label Наличие водоснабжения
+														.bot-form__inputs-cont
+															.default-input
+																input.default-input__input(type="text")
+																label.default-input__label Количество КВт
+																.forms__error-message
+														.bot-form__inputs-cont.bot-form__inputs-cont--textarea
+															.default-input
+																textarea.default-input__input.default-input__input--textarea
+																label.default-input__label Сообщение
+																.forms__error-message
+														.bot-form__inputs-cont
+															.bf-submit
+																.bf-submit__btn
+																	input.default-btn(type="submit" value="Отправить")
+																.bf-submit__text
+																	.form-req Нажимая кнопку, Вы даете информированное согласие на 
+																		a(href="#") обработку своих персональных данных
+			include inc/footer.pug
+		include inc/scripts.pug

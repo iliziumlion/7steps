@@ -2,6 +2,8 @@ import "./main-slider"
 import "./main-banners"
 import "./catalog-slider"
 import "./tovar"
+import "./forms"
+import "./ts-slider"
 import "./textPage/text-page"
 
 import {domReady, App, Element} from "./xpage/index"

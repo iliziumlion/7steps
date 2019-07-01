@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Покупателям
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Покупателям
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									span.bread-crumbs__this Покупателям
+				.inner-content__content
+					section.buyers__cont
+						.wrapper
+							.buyers
+								.buyers__top
+									.bt
+										.bt__contacts
+											.btc
+												.btc__item
+													.c-contacts__item-title Горячая линия
+													address.c-contacts__item-address
+														a(href="tel: +7 (812) 648-50-00") +7 (812) 648-50-00
+												.btc__item
+													.c-contacts__item-title Напишите нам
+													address.c-contacts__item-address
+														a(href="http://vk.com/7shagoff") vk.com/7shagoff
+													.btc__item-widget
+														img(src="img/photos/sm-widget.jpg")
+
+										.bt__text
+											h3 Вы можете связаться с нами с помощью горячей линии, группы "ВКонтакте" или через форму обратной связи
+											br
+											p На этой странице вы можете оставить свой отзыв или жалобу по работе магазина «Семишагофф», задать вопрос или высказать пожелания. Все обращения передаются компетентным сотрудникам компании для рассмотрения и принятия необходимых мер.
+											p Укажите как можно больше подробностей, чтобы ваше обращение было обработано максимально эффективно и быстро – адрес магазина, даты, цены, имена и фамилии сотрудников, сохраняйте и прикладывайте скан-копию чека, фотографии товара.
+											p При составлении обращения запрещено использовать нецензурную лексику и оскорбления, в противном случае ваша заявка не будет рассмотрена.
+											p Минимальный срок рассмотрения обращения – 3 рабочих дня.
+								.buyers__form
+									.bot-form
+										.bot-form__form
+											form(action="#")
+												span.bot-form__top
+													.bot-form__top-title
+														.bt-title
+															.bt-title__title
+																.bt-title__title-text Форма обратной связи
+																.bt-title__title-subtitle Мы рассмотрим ваше обращение в течение трех рабочих дней
+															.bt-title__select
+																select.default-input__input.default-input__input--select
+																	option(disabled="") Выберите адрес магазина
+																	- for (let i = 0; i < 10; i ++)
+																		option=i+" магазин"
+													.bot-form__top-map
+														.bf-map
+															img(src="img/photos/v-map.jpg")
+												.bot-form__inputs
+													.bot-form__inputs-cont
+														.default-input
+															select.default-input__input.default-input__input--select(required="")
+																option Благодарность
+																option Другое
+																option Другое
+															label.default-input__label Тема сообщения
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="email" required="" placeholder="info@gmail.com")
+															label.default-input__label E-mail
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input.default-input__input--file(type="file" id="bf-file-0" required="")
+															input.default-input__input.default-input__input--file-support(type="text" placeholder="Docx, exсel, pdf, jpg, png" readonly="")
+															label.default-input__label Прикрепить файл
+															label.default-input__label--file(for="bf-file-0") 
+															.forms__error-message
+												.bot-form__inputs.bot-form__inputs--2
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="text" required="" placeholder="Надежда")
+															label.default-input__label Имя
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="tel" placeholder="+7 (___) ___-__-__")
+															label.default-input__label Телефон
+															.forms__error-message
+													.bot-form__inputs-cont.bot-form__inputs-cont--textarea
+														.default-input
+															textarea.default-input__input.default-input__input--textarea
+															label.default-input__label Сообщение
+															.forms__error-message
+												.bf-submit
+													.bf-submit__btn
+														input.default-btn(type="submit" value="Отправить")
+													.bf-submit__text
+														.form-req Нажимая кнопку, Вы даете информированное согласие на 
+															a(href="#") обработку своих персональных данных
+		include inc/footer.pug
+		include inc/scripts.pug

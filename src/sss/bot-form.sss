@@ -1,0 +1,114 @@
+.bot-form
+	background: #fff
+	border: 1px solid var(--border-color)
+	border-radius: 5px
+	padding: 40px 45px 55px
+
+	&__top
+		display: block
+		width: 100%
+		margin: 0 0 44px
+
+		&-title
+
+			&:not(:last-child)
+				margin: 0 0 50px
+
+	&__title
+		font-weight: 500
+		font-size: 24px
+		margin: 0 0 40px
+
+	&__props
+		display: flex
+		flex-wrap: wrap
+
+	&__form
+
+		form
+			display: flex
+			flex-wrap: wrap
+
+	&__inputs
+		flex: 1 1 auto
+		max-width: 100%
+
+		&--2, &--3
+			display: flex
+			flex-wrap: wrap
+			margin: 0 0 -28px -33px
+
+			.bot-form__inputs-cont
+				margin: 0 0 28px 33px !important
+
+
+		&--2
+
+			.bot-form__inputs-cont
+				width: calc((100% - 33px * 2) / 2)
+
+				&--textarea
+					width: calc(100% - 33px) !important
+
+		&--3
+			width: auto !important
+
+			.bot-form__inputs-cont
+				width: calc((100% - 33px * 3) / 3)
+
+				&--textarea
+					width: calc((133.33% - 33px * 2) / 2)
+
+				.bf-submit
+					display: block
+
+					&__btn
+						margin: 0 0 22px 
+
+		&:first-of-type
+			flex: none
+
+			&:not(:last-child)
+				width: 366px
+				margin-right: 33px
+
+		&:not(:first-of-type)
+			width: calc(100% - 399px)
+
+		&-cont
+
+			&:not(:first-of-type)
+				margin: 28px 0 0
+
+		~ .bf-submit
+			margin: 35px 0 0
+
+.bf-submit
+	display: flex
+	align-items: center
+	width: 100%
+
+	&__btn
+		margin-right: 32px
+
+.bt-title
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__title
+		margin-right: 20px
+
+		&-text
+			font-weight: 500
+			font-size: 22px
+
+			&:not(:last-child)
+				margin: 0 0 12px
+
+		&-subtitle
+			font-size: 14px
+			color: #6F757B
+
+	&__select
+		flex: 0 1 545px

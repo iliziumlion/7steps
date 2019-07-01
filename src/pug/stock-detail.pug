@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Акция
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Акция
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Акции
+									span.bread-crumbs__this Акция
+				.inner-content__content
+					section.stock-detail__cont
+						.wrapper
+							.stock-detail
+								.stock-detail__banner
+									.sp-banner
+										picture.sp-banner__img
+											source(media="(min-width: 660px)" srcset="img/photos/sp-img.jpg")
+											source(media="(max-width: 660px)" srcset="img/photos/sp-img-mobile.jpg")
+											img
+										.sp-banner__text
+											.sp-banner__text-label Супер цена
+											.sp-banner__text-title Филе
+												br
+												| цыпленка окорок охлажденный
+								.stock-detail__form
+									.bot-form
+										.bot-form__form
+											form(action="#")
+												.bot-form__inputs.bot-form__inputs--3
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="tel")
+															label.default-input__label Код купона
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="text")
+															label.default-input__label Имя
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="tel" placeholder="+7 (___) ___-__-__")
+															label.default-input__label Телефон
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input(type="email")
+															label.default-input__label E-mail
+															.forms__error-message
+													.bot-form__inputs-cont
+														.default-input
+															input.default-input__input.default-input__input--file(type="file" id="bf-file-0" required="")
+															input.default-input__input.default-input__input--file-support(type="text" placeholder="Docx, exсel, pdf, jpg, png" readonly="")
+															label.default-input__label Прикрепить файл
+															label.default-input__label--file(for="bf-file-0") 
+															.forms__error-message
+												.bf-submit
+													.bf-submit__btn
+														input.default-btn(type="submit" value="Отправить")
+													.bf-submit__text
+														.form-req Нажимая кнопку, Вы даете информированное согласие на 
+															a(href="#") обработку своих персональных данных
+								.stock-detail__text
+									h3 Филе ципленка, окорок охлажденный
+									p Текст состоит из некоторого количества предложений. Одно предложение, даже очень распространённое, сложное, текстом назвать нельзя, поскольку текст можно расчленить на самостоятельные предложения, а части предложения сочетаются по законам синтаксиса сложного предложения, но не текста.
+		include inc/footer.pug
+		include inc/scripts.pug

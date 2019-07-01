@@ -1,0 +1,69 @@
+// Поставщикам
+@import "vendors.sss"
+
+// Арендаторы
+@import "tenants.sss"
+
+.partners
+
+	&__links
+		margin: 0 0 41px 
+		display: flex
+
+	&__content
+		margin: 50px 0 0
+
+	&__cont
+
+		&-slider
+			background: #fff
+			border-top: 1px solid var(--border-color)
+			border-bottom: 1px solid var(--border-color)
+			margin: 55px 0 0
+
+.partners-text
+	display: flex
+
+	h2, h3, h4
+		font-weight: 500
+
+	&__text
+		font-size: 15px
+		line-height: calc(25 / 15)
+		flex: 1 1 auto
+		margin-right: 65px
+
+	&__btn
+		flex: none
+
+		.default-btn
+			position: sticky 168px * *
+
+@media (min-width: 1000px)
+	.partners
+
+		&__links
+
+			&-select
+				display: none
+
+	.partners-link
+		font-size: 14px
+		letter-spacing: .02em
+		padding: 14px 20px
+		border-radius: 5px
+
+		&:not(:last-child)
+			margin-right: 19px
+
+		&:not(.active)
+			transition: background .3s ease, color .3s ease, border .3s ease
+			border: 1px solid var(--border-color)
+			color: #000
+
+		&.active, &:not(.active):hover
+			border: 1px solid transparent
+			color: #fff var(--main-color)
+
+		&.active
+			cursor: default

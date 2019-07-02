@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Магазины
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Магазины
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									span.bread-crumbs__this Магазины
+				.inner-content__content
+					section.shops__cont
+						.wrapper
+							.shops
+								.shops__filter
+									form(action="#")
+										.sh-filter
+											.sh-filter__tabs
+												.sh-tabs
+													.sh-tabs__tab.active(data-target="map") На карте
+													.sh-tabs__tab(data-target="list") Списком
+											.sh-filter__select
+												select.default-input__input.default-input__input--select
+													option(disabled="") Выберите нужный район
+													option Район 1
+													option Район 2
+													option Район 3
+													option Район 4
+											.sh-filter__search
+												input.sh-filter__search-input.default-input__input(type="text" placeholder="Введите станцию метро, чтобы найти ближайший магазин")
+												input.sh-filter__search-submit(type="submit" value="")
+								.shops__content
+									.sh-content.active(data-id="map")
+										img(src="img/photos/shops-map.jpg")
+									.sh-content(data-id="list")
+										.s-map
+											.s-map__points
+												ul.points-list
+													- for (let i = 0; i < 10; i++)
+														each point, j in [{address: "проспект Большевиков, 24", metro: "Ст. м. Улица Дыбенко"}, {address: "улица Васи Алексеева, 10", metro: "Ст. м. Кировский завод"}, {address: "Бухарестская улица, 31к1", metro: "Ст. м. Международная"}, {address: "Ленская улица, 18", metro: "Ст. м. Ладожская"}, ]
+															if (j == 0 && i == 0)
+																li.points-list__item.active
+																	.points-list__address
+																		.point-address
+																			address.point-address__address=point.address
+																			.point-address__metro=point.metro
+																	time.points-list__time
+																		span Пн. - вс.: 09:00 - 23:00
+															else
+																li.points-list__item
+																	.points-list__address
+																		.point-address
+																			address.point-address__address=point.address
+																			.point-address__metro=point.metro
+																	time.points-list__time
+																		span Пн. - вс.: 09:00 - 23:00
+											.s-map__map 
+												img(src="img/photos/shop-photo.jpg")
+		include inc/footer.pug
+		include inc/scripts.pug

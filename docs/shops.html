@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Магазины</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body class="inner loading">
+    <header class="head">
+      <div class="head__top">
+        <div class="wrapper">
+          <div class="h-top">
+            <div class="h-top__title">Продукты близко и недорого</div>
+            <div class="h-top__find"><a class="find-link fancybox" href="#">Найти ближайший магазин</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="head__main">
+        <div class="wrapper">
+          <div class="h-main">
+            <div class="head__logo"><a class="logo" href="#"><img src="img/logo.svg"/></a></div>
+            <nav class="head__menu">
+              <ul class="h-menu">
+                <li class="h-menu__submenu"><a class="h-menu__link" href="#">Каталог</a>
+                  <ul class="submenu">
+                    <li class="submenu__item"><a class="submenu__link active" href="#">Фрукты и овощи</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Мясо, птица, колбаса</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Молоко, сыр, яйцо</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Замороженная продукция</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Кондитерские изделия</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Функциональное питание</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Чай, кофе, какао</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Алкогольные напитки</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Безалкогольные напитки</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Хлеб и хлебобулочные изделия</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Бакалея</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Готовые блюда</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Рыба и морепродукты</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Красота и здоровье</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Бытовая химия</a>
+                    </li>
+                    <li class="submenu__item"><a class="submenu__link" href="#">Бытовая техника и электроника</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="h-menu__link" href="#">Акции</a></li>
+                <li><a class="h-menu__link" href="#">Магазины</a></li>
+                <li><a class="h-menu__link" href="#">Рецепты</a></li>
+              </ul>
+            </nav>
+            <div class="head__phone">
+              <address class="h-phone"><a href="tel: +7 (812) 648-50-00">+7 (812) 648-50-00</a></address>
+            </div>
+            <div class="head__btn"><a class="write-btn" href="#">Написать в Семишагофф</a></div>
+            <div class="head__burger">
+              <div class="burger"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <aside class="mobile-menu">
+      <div class="mobile-menu__content">
+        <div class="mobile-menu__find"><a class="find-link" href="#">Найти ближайший магазин</a></div>
+        <nav class="mobile-menu__nav">
+          <ul class="m-menu">
+            <li class="m-menu__item m-menu__item--submenu"><a class="m-menu__link active" href="#">Каталог</a>
+              <ul class="m-submenu">
+                <li class="m-submenu__back-item">
+                  <button class="m-submenu__back">Назад</button>
+                </li>
+                <li><a class="m-menu__link" href="#">Каталог</a></li>
+                <li><a class="m-menu__link" href="#">Фрукты и овощи</a></li>
+                <li><a class="m-menu__link" href="#">Мясо, птица, колбаса</a></li>
+                <li><a class="m-menu__link" href="#">Молоко, сыр, яйцо</a></li>
+                <li><a class="m-menu__link" href="#">Замороженная продукция</a></li>
+                <li><a class="m-menu__link" href="#">Кондитерские изделия</a></li>
+                <li><a class="m-menu__link" href="#">Функциональное питание</a></li>
+                <li><a class="m-menu__link" href="#">Чай, кофе, какао</a></li>
+                <li><a class="m-menu__link" href="#">Алкогольные напитки</a></li>
+                <li><a class="m-menu__link" href="#">Безалкогольные напитки</a></li>
+                <li><a class="m-menu__link" href="#">Хлеб и хлебобулочные изделия</a></li>
+                <li><a class="m-menu__link" href="#">Бакалея</a></li>
+                <li><a class="m-menu__link" href="#">Готовые блюда</a></li>
+                <li><a class="m-menu__link" href="#">Рыба и морепродукты</a></li>
+                <li><a class="m-menu__link" href="#">Красота и здоровье</a></li>
+                <li><a class="m-menu__link" href="#">Бытовая химия</a></li>
+                <li><a class="m-menu__link" href="#">Бытовая техника и электроника</a></li>
+              </ul>
+            </li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Акции</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Магазины</a></li>
+            <li class="m-menu__item"><a class="m-menu__link" href="#">Рецепты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__phone">
+          <div class="f-soc__title">Наш телефон</div>
+          <address class="m-phone"><a href="tel: +7 (812) 648-50-00">+7 (812) 648-50-00</a></address>
+        </div>
+        <div class="mobile-menu__soc">
+          <div class="f-soc">
+            <div class="f-soc__title">Мы в соцсетях</div>
+            <div class="soc"><a class="soc__link" href="#"><img src="img/ico-vk.svg"/></a><a class="soc__link" href="#"><img src="img/ico-inst.svg"/></a><a class="soc__link" href="#"><img src="img/ico-ok.svg"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main id="content">
+      <div class="inner-content">
+        <div class="inner-content__title">
+          <div class="wrapper">
+            <div class="title-block">
+              <div class="title-block__title">
+                <h1>Магазины</h1>
+              </div>
+              <div class="title-block__crumbs">
+                <div class="bread-crumbs"><a class="bread-crumbs__link" href="#">Главная</a><span class="bread-crumbs__this">Магазины</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-content__content">
+          <section class="shops__cont">
+            <div class="wrapper">
+              <div class="shops">
+                <div class="shops__filter">
+                  <form action="#">
+                    <div class="sh-filter">
+                      <div class="sh-filter__tabs">
+                        <div class="sh-tabs">
+                          <div class="sh-tabs__tab active" data-target="map">На карте</div>
+                          <div class="sh-tabs__tab" data-target="list">Списком</div>
+                        </div>
+                      </div>
+                      <div class="sh-filter__select">
+                        <select class="default-input__input default-input__input--select">
+                          <option disabled="">Выберите нужный район</option>
+                          <option>Район 1</option>
+                          <option>Район 2</option>
+                          <option>Район 3</option>
+                          <option>Район 4</option>
+                        </select>
+                      </div>
+                      <div class="sh-filter__search">
+                        <input class="sh-filter__search-input default-input__input" type="text" placeholder="Введите станцию метро, чтобы найти ближайший магазин"/>
+                        <input class="sh-filter__search-submit" type="submit" value=""/>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="shops__content">
+                  <div class="sh-content active" data-id="map"><img src="img/photos/shops-map.jpg"/></div>
+                  <div class="sh-content" data-id="list">
+                    <div class="s-map">
+                      <div class="s-map__points">
+                        <ul class="points-list">
+                          <li class="points-list__item active">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">проспект Большевиков, 24</address>
+                                <div class="point-address__metro">Ст. м. Улица Дыбенко</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">улица Васи Алексеева, 10</address>
+                                <div class="point-address__metro">Ст. м. Кировский завод</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Бухарестская улица, 31к1</address>
+                                <div class="point-address__metro">Ст. м. Международная</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                          <li class="points-list__item">
+                            <div class="points-list__address">
+                              <div class="point-address">
+                                <address class="point-address__address">Ленская улица, 18</address>
+                                <div class="point-address__metro">Ст. м. Ладожская</div>
+                              </div>
+                            </div>
+                            <time class="points-list__time"><span>Пн. - вс.: 09:00 - 23:00</span></time>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="s-map__map"> <img src="img/photos/shop-photo.jpg"/></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__wrap">
+          <div class="footer__about">
+            <div class="footer__about-contacts">
+              <div class="f-contacts">
+                <div class="f-contacts__title">Есть вопросы? Звоните!</div>
+                <address class="f-contacts__phone"><a href="tel: +7 (812) 648-50-00">+7 (812) 648-50-00</a></address>
+                <time class="f-contacts__time">Ежедневно с 10:00 до 22:00</time>
+              </div>
+            </div>
+            <div class="footer__about-copy">
+              <div class="copy"><span class="copy__text">© 2000-2019, ООО «Семишагофф»</span><a class="copy__link" href="#">Политика конфиденциальности</a></div>
+            </div>
+          </div>
+          <nav class="footer__menu">
+            <ul class="f-menu">
+              <li class="f-menu__item f-menu__item--submenu"><span class="f-menu__title">Партнерам</span>
+                <ul class="f-submenu">
+                  <li><a class="f-submenu__link" href="#">Поставщикам</a></li>
+                  <li><a class="f-submenu__link" href="#">Арендатор</a></li>
+                  <li><a class="f-submenu__link" href="#">Арендадатель</a></li>
+                  <li><a class="f-submenu__link" href="#">Грузоперевозчикам</a></li>
+                  <li><a class="f-submenu__link" href="#">Рекламодателям</a></li>
+                </ul>
+              </li>
+              <li class="f-menu__item"><a class="f-menu__title" href="#">Работа в компании</a></li>
+              <li class="f-menu__item f-menu__item--submenu"><span class="f-menu__title">покупателям</span>
+                <ul class="f-submenu">
+                  <li><a class="f-submenu__link" href="#">Каталог</a></li>
+                  <li><a class="f-submenu__link" href="#">Акции</a></li>
+                  <li><a class="f-submenu__link" href="#">Магазины</a></li>
+                  <li><a class="f-submenu__link" href="#">О нас</a></li>
+                  <li><a class="f-submenu__link" href="#">Рецепты</a></li>
+                  <li><a class="f-submenu__link" href="#">Новости</a></li>
+                  <li><a class="f-submenu__link" href="#">Контакты</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__links">
+            <div class="footer__links-subscribe">
+              <div class="subscribe-form">
+                <div class="subscribe-form__title">Узнай первым о наших акциях</div>
+                <form action="#">
+                  <input class="subscribe-form__input" type="email" placeholder="Ваш e-mail"/>
+                  <input class="default-btn" type="submit" value="Подписаться"/>
+                </form>
+              </div>
+            </div>
+            <div class="footer__links-bot">
+              <div class="f-soc">
+                <div class="f-soc__title">Мы в соцсетях</div>
+                <div class="soc"><a class="soc__link" href="#"><img src="img/ico-vk.svg"/></a><a class="soc__link" href="#"><img src="img/ico-inst.svg"/></a><a class="soc__link" href="#"><img src="img/ico-ok.svg"/></a>
+                </div>
+              </div><a class="dev" href="#" target="_blank"><img src="img/developer.svg"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/vendors.js"></script>
+    <script src="js/xpage.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

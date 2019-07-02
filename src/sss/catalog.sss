@@ -191,6 +191,11 @@
 				&:not(:first-child)
 					margin: 20px 0 0
 
+		.cat-item
+
+			&__title
+				height: auto !important
+
 .cat2
 	display: flex
 
@@ -222,6 +227,14 @@
 		&__desc
 			padding: 20px
 
+	.cat-list-item
+		padding: 20px
+
+		.cat-item
+
+			&__img
+				margin-right: 20px
+
 @media (max-width: 1200px) and (min-width: 1000px), (max-width: 880px) and (min-width: 660px)
 	.cat2-list:not(.cat2-list--list)
 		margin: 0 0 -20px -20px
@@ -230,19 +243,148 @@
 			width: calc((100% - 20px * 2) / 2)
 			margin: 0 0 20px 20px
 
-@media (max-width: 1000px)
+@media (max-width: 1000px) and (min-width: 660px)
+	.catalog-list
+		margin: 0 0 -20px -20px
+
+		&__item
+			width: calc((100% - 20px * 2) / 2)
+			margin: 0 0 20px 20px
+
 	.cat2
 
 		&__filter
+			position: fixed 81px 100% 0 *
+			z-index: 4
+			margin: 0
+			background: #fff
+			border-right: 1px solid var(--border-color)
+			width: 300px
+			transition: transform .3s ease
+
+		&__list
+			width: auto
+
+	.js__filter__opened
+
+		.cat2
+
+			&__filter
+				transform: translate3d(100%, 0, 0)
+
+
+
+@media (max-width: 660px)
+	.cat2-list
+		margin: 0 -20px !important
+
+		&:not(.cat2-list--list)
+			display: block
+
+			.cat2-list__item
+				width: auto
+				margin: 0
+
+		.cat-item
+			border-radius: 0
+			border-top: none
+			padding: 0
+
+			&__img
+				height: 160px
+
+			.cat-labels__label
+				border-radius: 0 !important
+
+			&__labels
+				position: static
+
+	.cat-item
+
+		&__title
+			font-size: 16px
+
+	.catalog-list
+		margin: 0
+		display: block
+
+		&__item
+			margin: 0
+			width: auto
+
+			&:not(:first-child)
+				margin: 20px 0 0
+
+	.cat2
+
+		&__filter
+			position: fixed 81px 0 0 *
+			z-index: 4
+			margin: 0
+			background: #fff
+			border-right: 1px solid var(--border-color)
+			width: 100%
 			display: none
 
 		&__list
 			width: auto
 
-@media (max-width: 660px)
-	.cat2-list:not(.cat2-list--list)
-		margin: 0 0 -20px -20px
+			&-sort
+				margin: 0
 
-		.cat2-list__item
-			width: calc(100% - 20px)
-			margin: 0 0 20px 20px
+			&-more, &-seo
+				margin: 25px 0 0
+
+	.js__filter__opened
+
+		.cat2
+
+			&__filter
+				display: block
+
+	.cat2-list--list
+
+		.cat2-list
+
+			&__item
+				margin: 0 !important
+
+	.cat-list-item
+		border-top: 0
+		display: block
+
+		.cat-item
+
+			&:after
+				content: ""
+				display: table
+				clear: both
+
+			&__img
+				size: 80px 120px
+				margin: 25px 0 0
+				margin-right: 15px
+				float: left
+
+			&__sale
+				top: 0
+				left: 0
+
+			&__title
+				min-height: 60px
+				display: block
+
+			&__desc
+				flex: 0 1 auto
+				display: block
+
+				&-labels
+					margin-bottom: 10px
+
+		.cat-labels
+			flex-direction: column
+			border-radius: 5px
+			overflow: hidden
+
+			&__label
+				border-radius: 0 !important

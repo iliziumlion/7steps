@@ -30,3 +30,36 @@ header.head
 						a(href="tel: +7 (812) 648-50-00") +7 (812) 648-50-00
 				.head__btn
 					a.write-btn(href="#") Написать в Семишагофф
+				.head__burger
+					.burger
+						span
+aside.mobile-menu
+	.mobile-menu__content
+		.mobile-menu__find
+			a.find-link(href="#") Найти ближайший магазин
+		nav.mobile-menu__nav
+			ul.m-menu
+				li.m-menu__item.m-menu__item--submenu
+					a.m-menu__link.active(href="#") Каталог
+					ul.m-submenu
+						li.m-submenu__back-item
+							button.m-submenu__back Назад
+						li
+							a.m-menu__link(href="#") Каталог
+						each link in ["Фрукты и овощи", "Мясо, птица, колбаса", "Молоко, сыр, яйцо", "Замороженная продукция", "Кондитерские изделия", "Функциональное питание", "Чай, кофе, какао", "Алкогольные напитки", "Безалкогольные напитки", "Хлеб и хлебобулочные изделия", "Бакалея", "Готовые блюда", "Рыба и морепродукты", "Красота и здоровье", "Бытовая химия", "Бытовая техника и электроника", ]
+							li
+								a.m-menu__link(href="#")=link
+				each link in ["Акции", "Магазины", "Рецепты", ]
+					li.m-menu__item
+						a.m-menu__link(href="#")=link
+		.mobile-menu__phone
+			.f-soc__title Наш телефон
+			address.m-phone
+				a(href="tel: +7 (812) 648-50-00") +7 (812) 648-50-00
+		.mobile-menu__soc
+			.f-soc
+				.f-soc__title Мы в соцсетях
+				.soc
+					each item in ["vk", "inst", "ok"]
+						a.soc__link(href="#")
+							img(src="img/ico-"+item+".svg")

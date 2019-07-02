@@ -11,17 +11,30 @@
 
 .bread-crumbs
 
+
+	&__link, &__this
+		display: inline
+
+		&:not(:first-child)
+
+			&:before
+				display: none
+
 	&__link
-		color: #B0B7BB
+
+		a
+			color: #B0B7BB
 
 		&:first-child
 
-			&:before
-				background: url("../img/ico-home.svg") no-repeat
+			&:before 
+				background: url("../img/ico-home.svg") no-repeat !important
 				size: 11px
 				content: ""
 				display: inline-block
-				margin-right: 15px
+				margin: 0 15px 0 0
+				border-radius: 0
+
 
 		&:after
 			content: "-"
@@ -30,3 +43,59 @@
 
 	&__this
 		color: var(--main-color)
+
+@media (max-width: 660px)
+	.title-block
+		background: #fff
+		padding: 10px 20px
+		position: relative
+		margin: 0 -20px
+
+		&__title
+			padding-left: 25px
+			margin: 0
+
+			h1
+				font-size: 22px
+
+	.bread-crumbs
+
+		&__this
+			display: none
+
+		&__link
+
+			&:not(:nth-last-child(2))
+				display: none
+
+			&:nth-last-child(2)
+
+				&:after, &:before
+					display: none
+
+				a
+					position: absolute
+					left: 10px
+					top: calc(50% - 15px)
+					text-indent: -9999px
+					overflow: hidden
+					display: block
+					size: 25px 30px
+					border: none !important
+
+				&:first-child
+
+					a
+						background: url("../img/ico-home.svg") center no-repeat
+
+				&:not(:first-child)
+
+					a
+
+						&:before
+							content: ""
+							size: 6px
+							position: absolute calc(50% - 3px) calc(50% - 3px) * *
+							border-left: 1px solid var(--main-color)
+							border-bottom: 1px solid var(--main-color)
+							transform: rotateZ(45deg)

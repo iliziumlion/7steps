@@ -163,3 +163,28 @@
 
 		&:nth-child(n + 7)
 			display: none
+
+@media (max-width: 1000px)
+	.filter
+		border: none
+		border-radius: 0
+		position: absolute 0 0 * *
+		size: 100%
+		overflow-y: auto
+		-webkit-overflow-scrolling: touch
+		overflow-scrolling: touch
+
+		&__item
+			
+			&-title
+				padding: 15px 40px 15px 20px
+
+			&-content
+				padding: 0 20px 15px
+		
+		&__btn
+			padding: 30px 20px
+			background: #fff
+			position: sticky * * 0
+			border-top: 1px solid var(--border-color)
+			text-align: center

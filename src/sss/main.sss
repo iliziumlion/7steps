@@ -10,6 +10,8 @@
 @import "_standart-page.sss"
 @import "bot-form.sss"
 
+@import "mobile-menu.sss"
+
 @import "_header.sss"
 @import "main-slider.sss"
 @import "main-catalog.sss"
@@ -31,6 +33,7 @@
 @import "buyers.sss"
 @import "partners.sss"
 @import "recipes.sss"
+@import "shops.sss"
 
 @import "_footer.sss"
 
@@ -84,3 +87,21 @@
 			margin: 0
 			align-self: center
 			width: 100%
+
+@media (max-width: 1320px)
+	.inner-content__content
+
+		> .wrapper
+			box-sizing: border-box
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.inner-content
+
+		&__title, &__content
+			margin: 20px 0 0
+
+@media (max-width: 660px)
+	.inner-content
+
+		&__title, &__content
+			margin: 0

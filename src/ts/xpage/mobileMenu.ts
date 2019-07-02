@@ -67,6 +67,9 @@ export default class MobileMenu{
 		this._settings = settings
 		this.burger = App.getElement(settings.burger)
 
+		this.menuActiveClass = settings.menuActiveClass
+		this.bodyActiveClass = settings.bodyActiveClass
+
 		this.menu = App.getElement(settings.menu)
 
 		this.bindEvents()

@@ -1,7 +1,7 @@
 import {domReady, EventListener, App} from "./xpage/index"
-import {Swiper, Lazy, Pagination, EffectFade} from 'swiper/dist/js/swiper.esm.js'
+import {Swiper, Lazy, EffectFade, Navigation} from 'swiper/dist/js/swiper.esm.js'
 
-Swiper.use([Lazy, Pagination, EffectFade])
+Swiper.use([Lazy, EffectFade, Navigation])
 
 domReady(() => {
 	let mainSlider: Swiper, navSlider: Swiper;
@@ -33,7 +33,14 @@ domReady(() => {
 			nextEl: ".ts-slider__arrows .swiper-button-next",
 		},
 		roundLengths: true,
-		// loop: true,
+		breakpoints: {
+			1000: {
+				slidesPerView: 5
+			},
+			660: {
+				slidesPerView: 2
+			}
+		}
 	})
 
 

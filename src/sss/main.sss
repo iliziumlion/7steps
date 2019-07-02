@@ -100,8 +100,31 @@
 		&__title, &__content
 			margin: 20px 0 0
 
+@media (max-width: 740px)
+	.s-map
+		flex-direction: column-reverse
+		margin: 0 -20px
+
+		&__points, &__map
+			width: 100%
+
+		&__map
+			margin: 0
+			height: 40vh
+
+	.points-list
+		max-height: 38vh
+
 @media (max-width: 660px)
 	.inner-content
 
 		&__title, &__content
 			margin: 0
+
+	.main-title
+		font-size: 18px
+
+		&--decor
+
+			span
+				padding: 2px 15px

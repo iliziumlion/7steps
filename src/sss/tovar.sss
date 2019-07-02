@@ -24,6 +24,16 @@
 		width: 452px
 		flex: none
 		margin-right: 74px
+		position: relative
+
+		&-sale
+			background: var(--thrid-color)
+			font-weight: 600
+			font-size: 30px
+			line-height: 1
+			position: absolute 20px * * -1px
+			padding: 10px 19px 7px
+			z-index: 2
 
 .tovar-sliders
 
@@ -287,3 +297,93 @@
 		background: url("../img/ico-metro.svg") left center no-repeat
 		color: #6F757B
 		font-size: 14px
+
+
+@media (max-width: 1200px)
+	.stock-map
+		padding: 30px 0
+
+		&__cont
+			margin: 30px 0 0
+
+		&__text
+			margin: 0 0 30px
+
+	.points-list
+
+		&__item
+			padding: 20px 30px
+
+@media (max-width: 1100px)
+	.points-list
+
+		&__item
+			padding: 20px
+
+		&::-webkit-scrollbar
+			width: 15px
+
+			&-track, &-thumb
+				border-width: 12px
+
+	.s-map
+
+		&__map
+			margin-left: 15px
+
+		&__points
+			width: calc(100% - 475px)
+
+@media (max-width: 1000px)
+	.points-list
+
+		&__item
+			display: block
+
+		&__time
+			display: block
+			margin: 10px 0 0
+
+	.tovar
+		padding: 30px 0
+		display: block
+
+		&__slider, &__desc
+			width: auto
+
+		&__slider
+			margin: 0
+
+		&__desc
+			margin: 20px 0 0
+
+	.tovar-desc
+
+		&__params, &__prices
+			margin: 0 0 30px
+
+@media (max-width: 660px)
+	.tovar__slider, .tovar-params
+		padding: 20px
+
+	.tovar-desc
+
+		&__title
+			display: none
+
+		&__btns
+
+			.white-btn
+				margin: 15px 0 0
+
+	.tovar-price
+
+		&__cur
+			font-size: 28px
+
+			&:not(:last-child)
+				display: block
+				margin: 0 0 10px
+
+		&__last
+			font-size: 22px

@@ -1,5 +1,5 @@
 import {Swiper, Lazy, Navigation, Keyboard, Autoplay} from 'swiper/dist/js/swiper.esm.js'
-import {domReady, App} from "./xpage/index"
+import {domReady, App, Element} from "./xpage/index"
 
 Swiper.use([Lazy, Navigation, Keyboard, Autoplay])
 
@@ -36,4 +36,16 @@ domReady(() => {
 			}
 		})
 	})
+
+	setSameHeights()
+
+	window.addEventListener("resize", setSameHeights)
 })
+
+const setSameHeights = () => {
+	App.each(".catalog-slider", (el: HTMLElement) => {
+		new Element(el.querySelectorAll(".cat-item__title")).height(
+			Math.max(...new Element(el.querySelectorAll(".cat-item__title")).map((value: HTMLElement) => {
+				return parseInt(getComputedStyle(value).height)})))
+	})
+}

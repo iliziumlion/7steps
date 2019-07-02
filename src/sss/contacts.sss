@@ -49,3 +49,48 @@
 
 				&[href*="tel"], &[href*="mail"]
 					color: #202730
+
+@media (max-width: 1200px)
+	.contacts
+
+		&__top
+			flex-direction: column-reverse
+			align-items: stretch
+
+			&-map
+				margin: 25px 0 0
+
+				img
+					width: 100%
+
+		&__form
+			margin: 30px 0 0
+
+@media (max-width: 1200px) and (min-width: 660px)
+	.c-contacts
+		display: flex
+		align-items: flex-end
+
+		&__item
+			flex: 1 1 auto
+			margin: 0 !important
+			padding: 0 !important
+			border: none !important
+
+			&:not(:last-child)
+				margin-right: 20px !important
+
+@media (max-width: 660px)
+	.c-contacts
+		margin: 20px 0 0
+
+		&__item
+
+			&-title
+
+				&--big
+					font-size: 18px
+
+			&:not(:last-child)
+				padding-bottom: 15px
+				margin-bottom: 15px

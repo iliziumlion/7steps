@@ -22,10 +22,24 @@ domReady(() => {
 				enabled: true,
 				onlyInViewport: true,
 			},
+			breakpoints: {
+				1000: {
+					slidesPerView: 3
+				},
+				800: {
+					slidesPerView: 2,
+					spaceBetween: 45
+				},
+				660: {
+					slidesPerView: 1
+				}
+			}
 		})
 	})
 
 	setSameHeights()
+
+	window.addEventListener("reisze", setSameHeights)
 })
 
 const setSameHeights = () => {

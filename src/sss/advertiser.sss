@@ -1,0 +1,111 @@
+.advertisers
+
+	&__form
+		margin: 54px 0 0
+
+.advertiser-title
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin: 0 0 47px
+
+	&__text
+		font-weight: 500
+		letter-spacing: .02em
+		line-height: 1
+		font-size: 22px
+
+	&__arrows
+		display: flex
+
+		.swiper-button
+
+			&-prev, &-next
+				margin: 0
+				border: none
+
+			&-prev
+				margin-right: 20px
+
+.advertiser-slider
+	overflow: hidden
+
+	.swiper-slide
+		height: auto
+		display: flex
+		flex-direction: column
+
+.advertiser-slide
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+	border-radius: 5px
+	background: #fff
+	overflow: hidden
+	border: 1px solid var(--border-color)
+
+	&__img
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 232px
+		position: relative
+
+		img
+			max-height: 100%
+
+		&:hover
+
+			.advertiser-slide__hover
+				opacity: 1
+
+	&__hover
+		position: absolute 0
+		display: flex
+		justify-content: center
+		align-items: center
+		background: rgba(0,0,0, .4)
+		opacity: 0
+		transition: opacity .3s ease
+
+		&-img
+			background: #fff
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 15px
+			border-radius: 50%
+			size: 87px
+	
+	&__desc
+		padding: 27px 32px 22px
+
+@media (max-width: 660px)
+	.advertiser
+
+		&__slider
+			position: relative
+			padding: 0 30px
+
+		&s__form
+			margin: 20px 0 0
+
+	.advertiser-title
+		margin: 0 0 20px
+
+		&__text
+			font-size: 18px
+
+		&__arrows
+			position: absolute calc(50% - 25px) 0 *
+			padding: 0 20px
+			justify-content: space-between
+
+	.advertiser-slide
+		border-radius: 0
+
+		&__img
+			height: 200px
+
+		&__desc
+			padding: 20px

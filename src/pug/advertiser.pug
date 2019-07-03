@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Рекламодателям
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug 
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Рекламодателям
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Партнёрам
+									span.bread-crumbs__this Рекламодателям
+				.inner-content__content
+					section.partners__cont
+						.wrapper
+							.partners
+								.partners__links
+
+									- var links = ["Поставщикам", "Арендаторам", "Арендодателям", "Грузоперевозчикам", "Рекламодателям", ]
+									- var curPage = 4
+
+									each link, i in links
+										if (i == curPage)
+											a.partners-link.active(href="#")=link
+										else
+											a.partners-link(href="#")=link
+									select.partners__links-select.no-selectize
+										each link, i in links
+											if (i == curPage)
+												option(value=i selected="")=link
+											else
+												option(value=i)=link
+								.partners__text
+									.partners-text
+										.partners-text__text
+											p Реклама в сети магазинов «Семишагофф» является одним из наиболее эффективных способов коммуникации с целевой аудиторией и эффективным инструментом продаж. К услугам наших рекламодателей более 100 магазинов по Санкт-Петербургу и Ленинградской области с лояльной целевой аудиторией, что предоставляет широкие возможности для рекламной и маркетинговой деятельности. Используя различные инструменты для разных каналов дистрибуции, Вы получите максимально эффективные результаты.
+											h3 Рекламные возможности:
+											ul
+												li размещение информационных материалов;
+												li размещение изображения товара в информационных брошюрах сети;
+												li размещение изображения товара в нашем рекламном модуле в СМИ;
+												li размещение изображения товара в социальных сетях (ВКонтакте, Инстаграм);
+												li проведение промо-конкурсов, розыгрышей в социальных сетях (ВКонтакте, Инстаграм);
+												li кросс-маркетинг;
+												li стикеры на камерах хранения;
+												li информационный щит (топпер);
+												li напольный стикер;
+												li шелф-токер;
+												li разделители вертикальные (шелф-баннер);
+												li промоакции;
+												li размещение рекламных материалов на платежных терминалах;
+												li размещение рекламных материалов в прикассовой зоне.
+											p Уважаемые заказчики и партнеры, здесь перечислены далеко не все рекламные возможности нашей компании. 
+												br 
+												| Мы всегда будем рады взаимовыгодному сотрудничеству.
+												br
+												| Заявки на размещение или предложения о сотрудничестве с указанием контактной информации отправляйте через форму обратной связи.
+												br
+												| Если ваше предложение нас заинтересовало, мы обязательно свяжемся с вами
+										.partners-text__btn
+											a.default-btn(href="#") Отправить коммерческое предложение
+								.partners__content
+									.advertisers
+										.advertiser__slider
+											.advertiser-title
+												.advertiser-title__text Галерея примеров рекламы
+												.advertiser-title__arrows
+													.swiper-button-prev
+													.swiper-button-next
+											.advertiser-slider
+												.swiper-wrapper
+													- for (let i = 0; i < 4; i++)
+														- for (let j = 0; j < 4; j++)
+															.swiper-slide
+																.advertiser-slide
+																	a.advertiser-slide__img.fancybox(href="img/photos/advertiser-img-"+j+".jpg" data-fancybox="advertiser-slide")
+																		if (i == 0 && j == 0)
+																			img(src="img/photos/advertiser-img-"+j+".jpg")
+																		else
+																			img.swiper-lazy(data-src="img/photos/advertiser-img-"+j+".jpg")
+																			.swiper-lazy-preloader
+																		.advertiser-slide__hover
+																			<!-- этого блока может не быть, я объясню как работает -->
+																			.advertiser-slide__hover-img
+																				<!-- есть несколько иконок: ico-gallery-vk.svg, ico-gallery-inst.svg, ico-gallery-book.svg, ico-gallery-tv.svg -->
+																				img(src="img/ico-gallery-vk.svg")
+																	.advertiser-slide__desc
+																		.cat-item__title Лиговсий 28, ТРК "Парус"
+																		.cat-item__volume Раздача листовок кассирами для компании ООО "Пилки"
+										.advertisers__form
+											.bot-form
+												.bot-form__form
+													form(action="#")
+														.bot-form__props
+															span.bot-form__top
+																.bot-form__top-title
+																	.bt-title
+																		.bt-title__title
+																			.bt-title__title-text Отправить коммерческое предложение
+																			.bt-title__title-subtitle Мы рассмотрим ваше обращение и дадим ответ в ближайшее время
+															.bot-form__inputs
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text" required="" placeholder="semishagoff")
+																		label.default-input__label Наименование компании
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text" placeholder="semishagoff.ru")
+																		label.default-input__label Сайт
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text" placeholder="semishagoff")
+																		label.default-input__label Тема сообщения
+																		.forms__error-message
+																
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input.default-input__input--file(type="file" id="bf-file-0")
+																		input.default-input__input.default-input__input--file-support(type="text" placeholder="Docx, exсel, pdf, jpg, png" readonly="")
+																		label.default-input__label Прикрепить файл
+																		label.default-input__label--file(for="bf-file-0") 
+																		.forms__error-message
+															.bot-form__inputs.bot-form__inputs--2
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input.default-input__input--error(type="tel" placeholder="+7 (___) ___-__-__" required="")
+																		label.default-input__label Телефон
+																		.forms__error-message Ошибка ввода
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="email" required="" placeholder="info@gmail.com")
+																		label.default-input__label E-mail
+																		.forms__error-message
+																.bot-form__inputs-cont
+																	.default-input
+																		input.default-input__input(type="text" placeholder="Надежда")
+																		label.default-input__label Контактное лицо
+																		.forms__error-message
+																.bot-form__inputs-cont.bot-form__inputs-cont--textarea
+																	.default-input
+																		textarea.default-input__input.default-input__input--textarea
+																		label.default-input__label Сообщение
+																		.forms__error-message
+															.bf-submit
+																.bf-submit__btn
+																	input.default-btn(type="submit" value="Отправить")
+																.bf-submit__text
+																	.form-req Нажимая кнопку, Вы даете информированное согласие на 
+																		a(href="#") обработку своих персональных данных
+			include inc/footer.pug
+		include inc/scripts.pug

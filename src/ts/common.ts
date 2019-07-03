@@ -5,6 +5,7 @@ import "./tovar"
 import "./forms"
 import "./ts-slider"
 import "./shops"
+import "./advertiser"
 import "./textPage/text-page"
 
 import {domReady, App, Element, MobileMenu, EventListener} from "./xpage/index"

@@ -22,7 +22,7 @@ domReady(() => {
 	tableWrap.classList.add("table-wrap");
 	tableWrapTrack.classList.add("table-wrap__track");
 
-	App.wrap("table:not([class])", tableWrapTrack)
+	App.wrap(".standart-page__text table:not([class])", tableWrapTrack)
 	App.wrap(".table-wrap__track", tableWrap)
 
 	App.each(".table-wrap", (el: HTMLElement) => {

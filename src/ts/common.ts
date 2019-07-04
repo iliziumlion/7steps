@@ -41,7 +41,7 @@ domReady(() => {
 		media: adaptiveMedia
 	})
 
-	new EventListener(".m-menu__item--submenu .m-menu__link").add("click", (el: HTMLElement, e: Event) => {
+	new EventListener(".m-menu__item--submenu > .m-menu__link").add("click", (el: HTMLElement, e: Event) => {
 		e.preventDefault()
 		
 		el.classList.add("js__opened")

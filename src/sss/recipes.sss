@@ -1,12 +1,4 @@
 .recipes
-	display: flex
-
-	&-aside
-		width: 302px
-		margin-right: 20px
-
-	&__select
-		display: none
 
 	&__links
 		border: 1px solid #EEF0F4
@@ -27,8 +19,6 @@
 			a
 				background: var(--main-color)
 				color: #fff
-	&__list
-		width: calc(100% - 302px - 20px)
 
 	&__item
 		padding: 25px
@@ -61,6 +51,7 @@
 
 			img
 				border-radius: 5px
+				display: block
 
 		&-info
 			display: flex
@@ -85,6 +76,7 @@
 		border: 1px solid #D8DFE3
 		border-radius: 100px
 		margin-right: 25px
+		white-space: nowrap
 
 .ico-ingredient
 	background-image: url('../img/ico-ingredient.svg')
@@ -100,3 +92,82 @@
 	background-image: url('../img/ico-time-r.svg')
 	background-repeat: no-repeat
 	background-position: left 10px center
+
+@media (max-width: 1300px)
+	.recipes
+
+		&__item
+			padding: 15px 20px
+
+			&-bot
+				flex-wrap: wrap
+				margin-bottom: -10px
+
+			&-img
+				margin-right: 30px
+
+	.recipes-el
+		margin-bottom: 10px
+
+@media (min-width: 1000px)
+	.recipes
+		display: flex
+
+		&-aside
+			width: 302px
+			margin-right: 20px
+
+		&__select
+			display: none
+
+		&__list
+			width: calc(100% - 302px - 20px)
+
+@media (max-width: 1000px)
+	.recipes
+
+		&__links
+			display: none
+
+		&-aside
+			margin: 0 0 20px
+
+		&__select
+
+			&-select
+				border: 1px solid var(--border-color)
+				height: 50px
+				transition: border-color .3s ease
+				width: 100%
+				background-color: #fff
+				border-radius: 5px !important
+				padding: 10px 20px
+				padding-right: 30px
+				background: url("../img/ico-select-arrow.svg") right 18px center no-repeat, #fff
+
+@media (max-width: 800px) and (min-width: 660px)
+	.recipes
+
+		&__list
+			display: flex
+			flex-wrap: wrap
+			margin: 0 0 -20px -20px
+
+		&__item
+			width: calc((100% - 20px * 2) / 2)
+			margin: 0 0 20px 20px !important
+
+@media (max-width: 800px)
+	.recipes
+
+		&__item
+
+			> div
+				display: block
+
+			&-img
+				display: block
+				margin: 0 0 20px
+
+				img
+					width: 100%

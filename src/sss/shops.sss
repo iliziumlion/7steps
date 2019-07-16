@@ -25,7 +25,8 @@
 
 		&-submit
 			position: absolute 0 0 0 *
-			background: url("../img/ico-search.svg") center no-repeat, var(--main-color)
+			background: url("../img/ico-search.svg") center no-repeat
+			background-color: var(--main-color)
 			transition: background-color .3s ease
 			width: 50px
 			border-radius: 0 5px 5px 0
@@ -69,3 +70,51 @@
 
 			&-track, &-thumb
 				border-color: #fafafa
+
+
+@media (max-width: 1300px) and (min-width: 1000px)
+	.sh-filter
+
+		&__select
+			flex: 0 1 300px
+
+@media (max-width: 1000px)
+	.sh-filter
+		flex-wrap: wrap
+
+		&__select
+			flex: 1 1 auto
+			margin-right: 0
+
+		&__search
+			width: 100%
+			margin: 20px 0 0
+
+@media (max-width: 660px)
+	.shops
+
+		&__cont
+			margin: 0 -20px
+			// padding: 20px 0
+			background: #fff
+
+		&__filter
+			margin: 0 0 20px
+
+	.sh-filter
+
+		&__tabs
+			margin-right: 0
+			width: 100%
+
+		&__search
+			margin: 0
+
+	.sh-tabs
+
+		&__tab
+			width: 50%
+			border-radius: 0
+
+	.sh-filter__search-input, .sh-filter__search-submit
+		border-radius: 0 !important

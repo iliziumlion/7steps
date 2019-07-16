@@ -5,7 +5,7 @@
 
 	&__item
 		width: calc((100% - 21px * 4) / 4)
-		margin: 0 0 32px 21px
+		margin: 0 0 32px 20.5px
 		display: flex
 		flex-direction: column
 
@@ -22,6 +22,7 @@
 		height: 290px
 		border-radius: 5px
 		margin-bottom: 29px
+		overflow: hidden
 
 	&__title
 		flex: 1 1 auto
@@ -35,7 +36,7 @@
 		&-text
 			font-weight: bold
 			line-height: calc(21 / 16)
-			font-size: 16px
+			font-size: 15px
 			// max-width: 190px
 
 @media (max-width: 1200px) and (min-width: 880px)
@@ -44,7 +45,11 @@
 
 		&__item
 			width: calc((100% - 20px * 3) / 3)
-			margin: 0 0 30px 20px
+			margin: 0 0 30px 19.5px
+
+@media (max-width: 950px) and (min-width: 660px)
+	.catalog-item__title-text
+		font-size: 14px
 
 @media (max-width: 880px) and (min-width: 660px)
 	.cat-list
@@ -52,7 +57,7 @@
 
 		&__item
 			width: calc((100% - 20px * 2) / 2)
-			margin: 0 0 30px 20px
+			margin: 0 0 30px 19.5px
 
 @media (max-width: 660px)
 	.cat-list

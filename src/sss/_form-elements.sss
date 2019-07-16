@@ -1,6 +1,27 @@
 #work
 	width: 1137px
 
+.popup-list[style*="inline-block"]
+	display: inline-flex !important
+	flex-wrap: wrap
+	max-width: 800px
+
+	.popup-item
+		width: 33.33%
+		text-align: center
+		margin-bottom: 25px
+
+	.name
+		margin: 20px 0 0
+		color: #000
+
+.forms__error, .forms__message
+	padding: 45px !important
+	font-size: 17px
+
+.forms__error
+	color: var(--main-color)
+
 .popup-form
 	display: none
 	margin: 0 !important
@@ -326,13 +347,6 @@ textarea.default-input__input
 				right: 2px
 				size: 22px 20px
 
-.fancybox
-
-	&-close
-
-		&-small
-			color: #fff !important
-
 .forms-recaptcha
 
 	+ .choose-form__bot
@@ -357,6 +371,9 @@ textarea.default-input__input
 		&__req, &__submit
 			margin: 20px 0 0
 
+	.popup-item
+		width: 50% !important
+
 
 @media screen and (max-width: 660px)
 	.fancybox
@@ -368,6 +385,9 @@ textarea.default-input__input
 
 				&:before
 					display: none !important
+
+	.popup-item
+		width: 100% !important
 
 	.forms
 

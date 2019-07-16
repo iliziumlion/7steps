@@ -8,8 +8,7 @@ domReady(() => {
 		new Swiper(el.querySelector(".catalog-slider__list"), {
 			loop: true,
 			slidesPerView: 4,
-			watchSlidesProgress: true,
-			roundLengths: true,
+			// watchSlidesProgress: true,
 			spaceBetween: 21,
 			navigation: {
 				prevEl: el.querySelector(".swiper-button-prev"),
@@ -46,6 +45,12 @@ const setSameHeights = () => {
 	App.each(".catalog-slider", (el: HTMLElement) => {
 		new Element(el.querySelectorAll(".cat-item__title")).height(
 			Math.max(...new Element(el.querySelectorAll(".cat-item__title")).map((value: HTMLElement) => {
+				value.removeAttribute("style")
+				return parseInt(getComputedStyle(value).height)})))
+		
+		new Element(el.querySelectorAll(".cat-buy")).height(
+			Math.max(...new Element(el.querySelectorAll(".cat-buy")).map((value: HTMLElement) => {
+				value.removeAttribute("style")
 				return parseInt(getComputedStyle(value).height)})))
 	})
 }

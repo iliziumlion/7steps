@@ -5,6 +5,11 @@
 	border: 1px solid var(--border-color)
 	border-radius: 5px
 
+	.filter
+		background: none
+		border-radius: 0
+		border: none
+
 	&__item
 
 		&:not(:last-of-type)
@@ -16,10 +21,14 @@
 			padding: 19px 50px 20px 30px
 			letter-spacing: .02em
 			font-size: 16px
-			font-weight: bold
+			font-weight: 500
 			line-height: calc(32 / 16)
 			user-select: none
 			display: block
+			text-transform: lowercase
+
+			&:first-letter
+				text-transform: uppercase
 
 			&:first-child:last-child
 
@@ -61,6 +70,13 @@
 
 		&:not(:first-child)
 			margin: 15px 0 0
+
+	&__link
+		display: inline-block
+		text-transform: lowercase
+
+		&:first-letter
+			text-transform: uppercase
 
 .price-filter
 	padding: 6px 0 35px
@@ -154,7 +170,8 @@
 		border-radius: 0 5px 5px 0
 		position: absolute 0 0 0 *
 		size: 50px
-		background: url("../img/ico-search.svg") center no-repeat, var(--main-color)
+		background: url("../img/ico-search.svg") center no-repeat
+		background-color: var(--main-color)
 		transition: background .3s ease
 
 		&:hover, &:focus

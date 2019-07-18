@@ -41,7 +41,7 @@
 	min-height: 13px
 
 	a
-		font-size: 500px
+		font-weight: 500
 		font-size: 20px
 		color: inherit
 
@@ -64,7 +64,7 @@
 
 	&__title
 		font-size: 19px
-		font-weight: 500
+		font-weight: 600
 
 .h-menu
 	display: flex
@@ -131,6 +131,11 @@
 		font-size: 14px
 		font-weight: 500
 		transition: color .3s ease
+		display: inline-block
+		text-transform: lowercase
+
+		&:first-letter
+			text-transform: uppercase
 
 		&:hover, &:focus, &.active
 			color: var(--main-color)
@@ -144,6 +149,7 @@
 	.find-link
 		color: inherit
 		font-size: 14px
+		font-weight: 500
 		position: relative
 
 		&:before
@@ -286,6 +292,7 @@
 		background-size: 70%
 		size: 40px
 		padding: 0
+		margin-right: 10px
 
 	.head
 

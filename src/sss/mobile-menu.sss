@@ -69,6 +69,10 @@
 			display: block
 			padding: 15px 20px
 			transition: color .3s ease, background-color .3s ease
+			text-transform: lowercase
+
+			&:first-letter
+				text-transform: uppercase
 
 			&.active, &:hover
 				color: #fff var(--main-color)
@@ -136,4 +140,5 @@
 	.find-link
 		padding: 15px 20px 13px 40px
 		display: block
-		background: url("../img/ico-loc-black.svg") left 20px center no-repeat, var(--thrid-color)
+		background: url("../img/ico-loc-black.svg") left 20px center no-repeat
+		background-color: var(--thrid-color)

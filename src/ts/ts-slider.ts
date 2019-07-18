@@ -47,5 +47,10 @@ const setSameHeights = () => {
 		new Element(el.querySelectorAll(".cat-item__title")).height(
 			Math.max(...new Element(el.querySelectorAll(".cat-item__title")).map((value: HTMLElement) => {
 				return parseInt(getComputedStyle(value).height)})))
+
+		new Element(el.querySelectorAll(".cat-buy")).height(
+			Math.max(...new Element(el.querySelectorAll(".cat-buy")).map((value: HTMLElement) => {
+				value.removeAttribute("style")
+				return parseInt(getComputedStyle(value).height)})))
 	})
 }

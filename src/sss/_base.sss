@@ -182,9 +182,13 @@ li
 		background: #61686F
 		size: 42px
 		border-radius: 50%
+		transition: background-color .3s ease
 
 		&:not(:last-child)
 			margin-right: 17px
+
+		&:hover, &:focus
+			background-color: var(--main-color)
 
 .swiper-list
 	overflow: hidden
@@ -196,6 +200,7 @@ li
 	display: inline-block
 	font-size: 14px
 	padding: 10px 18px 8px
+	font-weight: bold
 	white-space: nowrap
 
 .default-btn

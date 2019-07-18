@@ -6,6 +6,7 @@ import "./forms"
 import "./ts-slider"
 import "./shops"
 import "./advertiser"
+import "./recipes"
 import "./textPage/text-page"
 
 import {domReady, App, Element, MobileMenu, EventListener} from "./xpage/index"
@@ -64,6 +65,9 @@ domReady(() => {
 		setSameHeights()
 	})
 
+	window.addEventListener("resie", setSameHeights)
+	window.addEventListener("orientationchange", setSameHeights)
+
 	observer.observe(updatedDiv, {attributes: false, childList: true, characterData: false})
 })
 
@@ -71,6 +75,12 @@ const setSameHeights = () => {
 	App.each(".catalog-list, .cat2-list", (el: HTMLElement) => {
 		new Element(el.querySelectorAll(".cat-item__title")).height(
 			Math.max(...new Element(el.querySelectorAll(".cat-item__title")).map((value: HTMLElement) => {
+				value.removeAttribute("style")
+				return parseInt(getComputedStyle(value).height)})))
+
+		new Element(el.querySelectorAll(".cat-buy")).height(
+			Math.max(...new Element(el.querySelectorAll(".cat-buy")).map((value: HTMLElement) => {
+				value.removeAttribute("style")
 				return parseInt(getComputedStyle(value).height)})))
 	})
 }

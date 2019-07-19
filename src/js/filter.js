@@ -1,5 +1,6 @@
 import $ from "jquery"
 import "jquery-ui/ui/widgets/slider.js"
+import "./touch-for-ui-slider.js"
 
 document.addEventListener("DOMContentLoaded", function(){
 	/** Свернуть развернуть фильтр */

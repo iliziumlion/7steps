@@ -7,6 +7,7 @@ import "./ts-slider"
 import "./shops"
 import "./advertiser"
 import "./recipes"
+import "./partners"
 import "./textPage/text-page"
 
 import {domReady, App, Element, MobileMenu, EventListener} from "./xpage/index"

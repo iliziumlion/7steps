@@ -13,6 +13,11 @@
 		width: calc((100% - 20px * 5) / 5)
 		margin: 0 0 20px 20px
 
+	.main-catalog__list-more
+		text-align: center
+		margin-left: 20px
+		width: calc(100% + 20px)
+
 .tenant
 	display: flex
 	justify-content: center
@@ -146,6 +151,15 @@
 
 		&__title
 			margin: 0 0 25px
+
+@media (max-width: 1200px)
+	.ten-contacts
+		flex-wrap: wrap
+		
+		&__mail
+			width: 100%
+			margin: 10px 0 0
+
 
 @media (max-width: 1000px) and (min-width: 660px)
 	.tenants-list

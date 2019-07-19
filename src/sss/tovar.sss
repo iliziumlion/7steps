@@ -19,7 +19,7 @@
 
 	&__slider
 		border-radius: 5px
-		border: 1px solid var(--border-color)
+		border: 1px solid #D8DFE3
 		padding: 20px 40px 16px
 		width: 452px
 		flex: none
@@ -49,6 +49,7 @@
 		justify-content: center
 		align-items: center
 		cursor: pointer
+		min-height: 240px
 
 		&:after
 			content: ""
@@ -216,38 +217,6 @@
 	.points-list__item
 		cursor: pointer
 
-@media (min-width: 1300px)
-	.stock-map
-
-		&__cont
-
-			&:last-child
-				margin-bottom: -68px
-
-@media (max-width: 1300px) and (min-width: 1000px)
-	.stock-map
-
-		&__cont
-
-			&:last-child
-				margin-bottom: -40px
-
-@media (max-width: 1000px) and (min-width: 660px)
-	.stock-map
-
-		&__cont
-
-			&:last-child
-				margin-bottom: -20px
-
-@media (max-width: 660px)
-	.stock-map
-
-		&__cont
-
-			&:last-child
-				margin-bottom: -24px
-
 .stock-map
 	padding: 60px 0 70px
 
@@ -313,7 +282,7 @@
 		transition: border-color .3s ease, background .3s ease
 
 		&:not(:first-child)
-			border-top: 1px solid var(--border-color)
+			border-top: 1px solid #DADDDF
 
 		&.active
 			background: #fff
@@ -326,9 +295,11 @@
 		min-height: 15px
 		padding: 2px 0
 		background: url("../img/ico-time.svg") left center no-repeat
-		padding-left: 27px
+		padding-left: 22px
 		color: #393939
 		font-size: 14px
+		width: 115px
+		text-align: right
 
 .point-address
 	letter-spacing: .02em
@@ -336,6 +307,7 @@
 	&__address
 		font-size: 16px
 		line-height: calc(22 / 16)
+		font-weight: 500
 
 		&:not(:last-child)
 			margin-bottom: 10px
@@ -346,6 +318,40 @@
 		background: url("../img/ico-metro.svg") left center no-repeat
 		color: #6F757B
 		font-size: 14px
+
+@media (min-width: 1300px)
+	.stock-map
+
+		&__cont
+
+			&:last-child
+				margin-bottom: -68px
+
+@media (max-width: 1300px) and (min-width: 1000px)
+	.stock-map
+
+		&__cont
+
+			&:last-child
+				margin-bottom: -40px
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.stock-map
+
+		&__cont
+
+			&:last-child
+				margin-bottom: -20px
+
+@media (max-width: 660px)
+	.stock-map
+
+		&__cont
+
+			&:last-child
+				margin-bottom: -24px
+
+
 
 
 @media (max-width: 1200px)

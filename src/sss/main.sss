@@ -91,6 +91,40 @@
 			align-self: center
 			width: 100%
 
+ymaps
+	
+	&[class*="balloon__content"]
+		padding: 34px 0 40px 40px !important
+		margin-right: 40px !important
+
+	&[class*="balloon__tail"]
+		display: none !important
+
+	&[class*="balloon "]
+		box-shadow: none !important
+		padding: 0 !important
+		// transform: translateX(-28%)
+		overflow: hidden
+
+		&:after
+			content: ""
+			position: absolute calc(100% - 9px) * * 34px
+			size: 35px
+			background: #fff
+			border: 5px solid var(--main-color)
+			z-index: 2
+			border-radius: 50%
+
+		.points-list
+
+			&__address, &__time
+
+				&:not(:last-child)
+					margin-bottom: 28px
+
+	&[class*="balloon__layout"]
+		border-radius: 5px
+
 @media (max-width: 1320px)
 	.inner-content__content
 

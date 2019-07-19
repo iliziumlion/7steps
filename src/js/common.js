@@ -79,6 +79,16 @@ document.addEventListener("DOMContentLoaded", function(){
 		submenuDirection: "below",
 		exitMenu: menu.close,
 	})
+
+	$(".partners-text__btn .default-btn").click(function(e){
+		const $target = $($(this).attr("href"));
+
+		$("html, body").animate({
+			scrollTop: $target.offset().top - $(".head").height() - 30
+		}, 300)
+
+		e.preventDefault()
+	})
 })
 
 
